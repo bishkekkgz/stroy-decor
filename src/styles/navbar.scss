@@ -50,7 +50,7 @@ p{
 #heart{
     margin-left: 2vw;
 }
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 350px) {
     *{
         margin: 0;
         padding: 0;
@@ -81,59 +81,69 @@ p{
     }
 }
 
-// @media screen and (min-width: 340px) and (max-width: 768px) {
-//     .main-container {
-//         padding-top: 0;
-//     }
-//     .school-name-container {
-//         margin-top: 12px;
-//     }
-//     .school-name {
-//         font-size: 7vw;
-//         width: 80%;
-//     }
-//     .ismart-olimp {
-//         font-weight: 300;
-//         font-size: 8vw;
-//         margin-top: 10vh;
-//     }
-//     .info1, .info2 {
-//         font-weight: 200;
-//         font-size: 6vw;
-//         margin-top: 7vw;
-//     }
-//     .results-btn{
-//         font-size: 6vw;
-//         padding: 2vw 6vw;
-//         margin-top: 12vh;
-//     }
-// }
+@media screen and (min-width: 350px) and (max-width: 760px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .navbar-cont {
+        padding: 0;
+    }
+    nav ol a {
+        margin-right: 3.8vw;
+    }
+    nav ol a img {
+        height: 6vh;
+        margin-right: 1vw;
+    }
+    nav #icon, #heart{
+        font-size: 6vw;
+        margin: 0 0.4vw 0 1vw;
+    }
+    .search {
+        visibility: hidden;
+        width: 0;
+    }
+    p{
+        font-size: 4.8vw;
+    }
+    #heart{
+        margin-left: 1vw;
+    }
+}
 
-// @media screen and (min-width: 768px) and (max-width: 1024px) {
-//     .main-container {
-//         padding-top: 0;
-//     }
-//     .school-name-container {
-//         margin-top: 0;
-//     }
-//     .school-name {
-//         font-size: 5vw;
-//         width: 80%;
-//     }
-//     .ismart-olimp {
-//         font-weight: 300;
-//         font-size: 7vw;
-//         margin-top: 10vh;
-//     }
-//     .info1, .info2 {
-//         font-weight: 200;
-//         font-size: 5vw;
-//         margin-top: 5vw;
-//     }
-//     .results-btn{
-//         font-size: 5vw;
-//         padding: 2vw 6vw;
-//         margin-top: 12vh;
-//     }
-// }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .navbar-cont {
+        padding: 0;
+    }
+    nav ol a {
+        margin-right: 3vw;
+    }
+    nav ol a img {
+        height: 7vh;
+        margin-right: 1vw;
+    }
+    nav #icon, #heart{
+        font-size: 4vw;
+        margin: 0 0.4vw 0 1vw;
+    }
+    .search {
+        border-radius: 4px;
+        padding: 0.8vw 1.6vw;
+        width: 18vw;
+        justify-content: space-between;
+        border: none;
+        font-size: 2.4vw;
+    }
+    p{
+        font-size: 3.5vw;
+    }
+    #heart{
+        margin-left: 1vw;
+    }
+}
 

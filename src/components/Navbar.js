@@ -8,6 +8,8 @@ const Navbar = () => {
     const handleSearch = () => {
         if (window.innerWidth <= 768) {
             window.location.href = "/search";
+        }else{
+            // getinput and search data from json
         }
     };
 

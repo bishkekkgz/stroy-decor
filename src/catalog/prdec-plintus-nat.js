@@ -182,3 +182,4 @@ export const PlintusNat = [
         inStock: false
     },
 ]
+export default PlintusNat;

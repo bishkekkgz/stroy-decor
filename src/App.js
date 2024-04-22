@@ -1,8 +1,8 @@
 import React from "react";
 import Main from "./components/Main";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import SearchScreen from "./components/SearchScreen";
+import PrimeDecorPlintusNat from "./components/primedec/PrimeDecorPlintusNat";
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/search" element={<SearchScreen />} />
+          <Route path="/primedeccat" element={<PrimeDecorPlintusNat />} />
         </Routes>
       </Router>
     </div>

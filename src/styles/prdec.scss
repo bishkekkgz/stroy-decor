@@ -1,5 +1,6 @@
 *{
     overflow-x: hidden; 
+    margin: 0;
 }
 body {
     margin: 0;
@@ -28,6 +29,63 @@ body {
             width: 100%;
         }
     }
+
+.name{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    cursor: auto;
+    font-size: 1.6vw;
+    font-weight: 400;
+    margin: 1vw;
+}
+.price-cont,
+.items-quantity-cont,
+.cont-items-basket{
+    display: flex;
+    margin: 1vw 0 0 1vw;
+}
+.cont-items-basket{
+    margin: 0;
+}
+.price {
+    font-family: Roboto, sans-serif;
+    font-size: 1.7vw;
+    font-weight: 700;
+}
+.quantity {
+    font-family: Roboto, sans-serif;
+    font-size: 1.7vw;
+    font-weight: 700;
+    margin-left: 1vw;
+}
+#som{
+    font-family: Roboto, sans-serif;
+    font-size: 1.7vw;
+    font-weight: 700;
+    color: rgb(119, 119, 119);
+    margin-left: 0.5vw;
+}
+.items-quantity-cont button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 4px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.items-quantity-cont button:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+.items-quantity-cont button:last-child {
+    border-radius: 0 5px 5px 0;
+}
+
+.items-quantity-cont p {
+    margin: 0 10px; 
+    font-size: 1.4vw;
+}
 
 
 @media screen and (max-width: 340px) {

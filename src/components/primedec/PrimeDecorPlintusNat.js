@@ -4,17 +4,7 @@ import '../../styles/prdec.scss';
 
 const PrimeDecorPlintusNat = () => {
     const [counts, setCounts] = useState({});
-    const [basketProducts, setBasketProducts] = useState([]);
     
-    useEffect(() => {
-        const basketProductsFromStorage = JSON.parse(localStorage.getItem('basketProducts')) || [];
-        setBasketProducts(basketProductsFromStorage);
-    }, []);
-
-    useEffect(() => {
-        localStorage.setItem('basketProducts', JSON.stringify(basketProducts));
-    }, [basketProducts]);
-
     const increment = (id) => {
         setCounts(prevCounts => ({
             ...prevCounts,
@@ -30,6 +20,18 @@ const PrimeDecorPlintusNat = () => {
             }));
         }
     };
+    const [basketProducts, setBasketProducts] = useState([]);
+    
+    useEffect(() => {
+        const basketProductsFromStorage = JSON.parse(localStorage.getItem('basketProducts')) || [];
+        setBasketProducts(basketProductsFromStorage);
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('basketProducts', JSON.stringify(basketProducts));
+    }, [basketProducts]);
+
+
     const toggleBasket = (id) =>{
         if(basketProducts.includes(id)){
             setBasketProducts(basketProducts.filter(productId =>productId !== id ));
@@ -37,6 +39,7 @@ const PrimeDecorPlintusNat = () => {
             setBasketProducts([...basketProducts, id]);
         }
     }
+    
 
     return (
         <div className='primedec-container'>
@@ -54,11 +57,10 @@ const PrimeDecorPlintusNat = () => {
                                 <div className='cont-items-basket'>
                                     <div className='items-quantity-cont'>
                                         <button onClick={() => decrement(record.id)}>-</button>
-                                        <p>{counts[record.id] || 0}</p>
+                                        <p className='count-p'>{counts[record.id] || 0}</p>
                                         <button onClick={() => increment(record.id)}>+</button>
                                     </div>
-                                    <button onClick={() => toggleBasket(record.id)}>В корзину</button>
-                                    
+                                    <button className="basket-btn" onClick={() => toggleBasket(record.id)}>В корзину</button>
                                 </div>
                             </div>
                         ) : null}

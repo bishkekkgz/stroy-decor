@@ -1,4 +1,4 @@
-export const PlintusNat = [
+const PlintusNat = [
     {
         id: 1,
         image: "N-60",

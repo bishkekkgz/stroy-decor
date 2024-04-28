@@ -4,6 +4,7 @@ import '../../styles/prdec.scss';
 
 const PrimeDecorPlintusNat = () => {
     const [counts, setCounts] = useState({});
+    const [basketProducts, setBasketProducts] = useState([]);
     
     const increment = (id) => {
         setCounts(prevCounts => ({
@@ -11,7 +12,6 @@ const PrimeDecorPlintusNat = () => {
             [id]: (prevCounts[id] || 0) + 1 
         }));
     };
-
     const decrement = (id) => {
         if (counts[id] && counts[id] > 0) {
             setCounts(prevCounts => ({
@@ -20,18 +20,13 @@ const PrimeDecorPlintusNat = () => {
             }));
         }
     };
-    const [basketProducts, setBasketProducts] = useState([]);
-    
     useEffect(() => {
         const basketProductsFromStorage = JSON.parse(localStorage.getItem('basketProducts')) || [];
         setBasketProducts(basketProductsFromStorage);
     }, []);
-
     useEffect(() => {
         localStorage.setItem('basketProducts', JSON.stringify(basketProducts));
     }, [basketProducts]);
-
-
     const toggleBasket = (id) =>{
         if(basketProducts.includes(id)){
             setBasketProducts(basketProducts.filter(productId =>productId !== id ));

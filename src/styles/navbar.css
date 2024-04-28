@@ -1,5 +1,5 @@
 .navbar-cont {
-  padding: 1rem 3rem;
+  padding: 0.8vw 1vw;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -22,19 +22,20 @@ nav ol a {
   text-decoration: none;
   color: #333333;
   display: flex;
-  margin-right: 5vw;
+  margin-right: 3.8vw;
   align-items: center;
+  height: 100%;
 }
 
 nav ol a img {
-  height: 7vh;
-  margin-right: 30vw;
+  height: 8vh;
+  margin-right: 20vw;
 }
 
 nav #icon, #heart {
-  font-size: 1.4rem;
+  font-size: 2vw;
   vertical-align: middle;
-  margin: 0 10px;
+  margin: 0 0.4vw 0 2vw;
 }
 
 .search {
@@ -42,17 +43,112 @@ nav #icon, #heart {
   align-items: center;
   background-color: #f2f2f2;
   border-radius: 4px;
-  padding: 0.5rem 1.2rem;
+  padding: 0.5vw 1.2vw;
   width: 18vw;
   justify-content: space-between;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1.2vw;
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1.3vw;
 }
 
 #heart {
   margin-left: 2vw;
+}
+
+@media screen and (max-width: 350px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .navbar-cont {
+    padding: 0;
+  }
+  nav ol a {
+    margin-right: 3.8vw;
+  }
+  nav ol a img {
+    height: 7vh;
+    margin-right: 1vw;
+  }
+  nav #icon, #heart {
+    font-size: 6vw;
+    margin: 0 0.4vw 0 1vw;
+  }
+  .search {
+    visibility: hidden;
+    width: 0;
+  }
+  p {
+    font-size: 4.8vw;
+  }
+  #heart {
+    margin-left: 1vw;
+  }
+}
+@media screen and (min-width: 350px) and (max-width: 760px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .navbar-cont {
+    padding: 0;
+  }
+  nav ol a {
+    margin-right: 3.8vw;
+  }
+  nav ol a img {
+    height: 6vh;
+    margin-right: 1vw;
+  }
+  nav #icon, #heart {
+    font-size: 6vw;
+    margin: 0 0.4vw 0 1vw;
+  }
+  .search {
+    visibility: hidden;
+    width: 0;
+  }
+  p {
+    font-size: 4.8vw;
+  }
+  #heart {
+    margin-left: 1vw;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .navbar-cont {
+    padding: 0;
+  }
+  nav ol a {
+    margin-right: 3vw;
+  }
+  nav ol a img {
+    height: 7vh;
+    margin-right: 1vw;
+  }
+  nav #icon, #heart {
+    font-size: 4vw;
+    margin: 0 0.4vw 0 1vw;
+  }
+  .search {
+    border-radius: 4px;
+    padding: 0.8vw 1.6vw;
+    width: 18vw;
+    justify-content: space-between;
+    border: none;
+    font-size: 2.4vw;
+  }
+  p {
+    font-size: 3.5vw;
+  }
+  #heart {
+    margin-left: 1vw;
+  }
 }/*# sourceMappingURL=navbar.css.map */

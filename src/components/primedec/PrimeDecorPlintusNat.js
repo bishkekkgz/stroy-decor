@@ -35,7 +35,6 @@ const PrimeDecorPlintusNat = () => {
         }
     }
     
-
     return (
         <div className='primedec-container'>
             <div className='primedec'>

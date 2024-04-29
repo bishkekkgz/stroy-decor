@@ -19,7 +19,7 @@ body {
     grid-gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-auto-rows: minmax(auto, 1fr);
-    margin-top: 4vw;
+    margin-top: 2vw;
 }
 .duties {
     width: 100%;
@@ -100,6 +100,13 @@ body {
 .basket-btn:hover{
     background-color: darken(rgb(42, 83, 115), 10%);
 }
+.section-header{
+    text-align: center;
+    margin-top: 3vw;
+    font-size: 2.8vw;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+}
 
 @media screen and (max-width: 340px) {  
     .name{
@@ -144,6 +151,10 @@ body {
         padding: 0.5vw 3vw;
         font-size: 5vw;
     }
+    .section-header{
+        margin-top: 2vw;
+        font-size: 8vw;
+    }
 }
 
 @media screen and (min-width: 340px) and (max-width: 768px) {
@@ -172,6 +183,10 @@ body {
         padding: 1vw 3vw;
         font-size: 4vw;
     }
+    .section-header{
+        margin-top: 2vw;
+        font-size: 8vw;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -199,5 +214,8 @@ body {
         padding: 1vw;
         font-size: 3vw;
     }
-    
+    .section-header{
+        margin-top: 2vw;
+        font-size: 6vw;
+    }
 }

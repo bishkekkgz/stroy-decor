@@ -30,7 +30,6 @@ const Basket = () => {
 
     useEffect(() => {
         const basketProductsFromStorage = JSON.parse(localStorage.getItem('basketProducts')) || [];
-        console.log("Basket products from storage:", basketProductsFromStorage);
         setBasketProducts(basketProductsFromStorage);
     }, []);
 
@@ -49,21 +48,21 @@ const Basket = () => {
                             <img src={require(`../assets/catalog/primeDecor/${record.image}.jpg`)} alt={record.image} />
                             <p className='name'>{record.image}</p>
                             {record.inStock ? (
-                            <div>
-                                <div className='price-cont'>
-                                    <p className='price'>{record.price}</p>
-                                    <p id="som">c</p>
-                                </div>
-                                <div className='cont-items-basket'>
-                                    <div className='items-quantity-cont'>
-                                        <button onClick={() => decrement(record.id)}>-</button>
-                                        <p className='count-p'>{counts[record.id] || 0}</p>
-                                        <button onClick={() => increment(record.id)}>+</button>
+                                <div>
+                                    <div className='price-cont'>
+                                        <p className='price'>{record.price}</p>
+                                        <p id="som">c</p>
                                     </div>
-                                    <button className="basket-btn" onClick={() => deleteFromBasket(record.id)}>Удалить</button>
+                                    <div className='cont-items-basket'>
+                                        <div className='items-quantity-cont'>
+                                            <button onClick={() => decrement(record.id)}>-</button>
+                                            <p className='count-p'>{counts[record.id] || 0}</p> 
+                                            <button onClick={() => increment(record.id)}>+</button>
+                                        </div>
+                                        <button className="basket-btn" onClick={() => deleteFromBasket(record.id)}>Удалить</button>
+                                    </div>
                                 </div>
-                            </div>
-                        ) : null}
+                            ) : null}
                         </div>
                     ))}
                     </div>

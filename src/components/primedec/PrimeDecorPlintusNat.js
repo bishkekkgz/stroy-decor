@@ -27,13 +27,17 @@ const PrimeDecorPlintusNat = () => {
     useEffect(() => {
         localStorage.setItem('basketProducts', JSON.stringify(basketProducts));
     }, [basketProducts]);
-    const toggleBasket = (id) =>{
+    const toggleBasket = (id, counts) => {
+        const quantity = counts[id] || 0; 
         if(basketProducts.includes(id)){
-            setBasketProducts(basketProducts.filter(productId =>productId !== id ));
-        }else{
+            setBasketProducts(basketProducts.filter(productId => productId !== id ));
+        } else {
             setBasketProducts([...basketProducts, id]);
         }
-    }
+        console.log(`Added ${quantity} ${quantity === 1 ? 'item' : 'items'} to basket`); 
+    };
+    
+    
     
     return (
         <div className='primedec-container'>
@@ -52,9 +56,19 @@ const PrimeDecorPlintusNat = () => {
                                     <div className='items-quantity-cont'>
                                         <button onClick={() => decrement(record.id)}>-</button>
                                         <p className='count-p'>{counts[record.id] || 0}</p>
+                                        <div className='cont-items-basket'>
+                                            <ItemsQuantityCount 
+                                                counts={counts} 
+                                                basketProducts={basketProducts}
+                                                productId={record.id}
+                                                onIncrement={increment}
+                                                onDecrement={decrement}
+                                                onToggleBasket={toggleBasket}
+                                            />
+                                        </div>
                                         <button onClick={() => increment(record.id)}>+</button>
                                     </div>
-                                    <button className="basket-btn" onClick={() => toggleBasket(record.id)}>В корзину</button>
+                                    <button className="basket-btn" onClick={() => toggleBasket(record.id, counts)}>В корзину</button>
                                 </div>
                             </div>
                         ) : null}

@@ -6,12 +6,10 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-
 .primedec-container {
     display: flex;
     justify-content: center;
 }
-
 .primedec {
     margin-left: -4px;
     width: 80%;
@@ -30,7 +28,6 @@ body {
         width: 100%;
     }
 }
-
 .name{
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
@@ -41,64 +38,29 @@ body {
     margin: 1vw;
 }
 .price-cont,
-.items-quantity-cont,
-.cont-items-basket{
+.items-quantity-cont{
     display: flex;
     margin-left: 1vw;
 }
-.cont-items-basket{
-    margin: 0;
+.price-basket-cont{
+    display: flex;
     justify-content: space-between;
-    margin-top: 1vw;
+    height: fit-content;
+}
+#icon{
+    font-size: 3vw;
+    vertical-align: top;
+    margin-top: 0;
 }
 .price,
-.quantity,
 #som{
     font-family: Roboto, sans-serif;
     font-size: 1.7vw;
     font-weight: 700;
 }
-.quantity {
-    margin-left: 1vw;
-}
 #som{
     color: rgb(119, 119, 119);
     margin-left: 0.5vw;
-}
-.items-quantity-cont button {
-    background-color: #f0f0f0;
-    border: none;
-    padding: 0.5vw 1vw;
-    font-size: 1.1vw;
-    cursor: pointer;
-}
-.items-quantity-cont button:first-child {
-    border-radius: 5px 0 0 5px;
-}
-.items-quantity-cont button:last-child {
-    border-radius: 0 5px 5px 0;
-}
-
-.items-quantity-cont .count-p {
-    margin: 0 10px; 
-    font-size: 1.4vw;
-    font-family: Roboto, sans-serif;
-}
-.items-quantity-cont {
-    display: flex;
-    align-items: center;
-}
-.basket-btn{
-    background-color: rgb(42, 83, 115);
-    border-radius: 0.3vw;
-    border: none;
-    padding: 0.5vw 1.2vw;
-    color: #fff;
-    font-size: 1vw;
-    font-family: Roboto, sans-serif;
-}
-.basket-btn:hover{
-    background-color: darken(rgb(42, 83, 115), 10%);
 }
 .section-header{
     text-align: center;
@@ -109,51 +71,59 @@ body {
 }
 
 @media screen and (max-width: 340px) {  
+    .primedec {
+        margin-left: -4px;
+        width: 80%;
+    }
+    .duties {
+        width: 100%;
+        border-radius: 10px;
+        padding: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        img {
+            width: 100%;
+        }
+    }
     .name{
-        font-size: 2vw;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        cursor: auto;
+        font-size: 1.6vw;
         font-weight: 400;
         margin: 1vw;
     }
     .price-cont,
-    .items-quantity-cont,
-    .cont-items-basket{
+    .items-quantity-cont{
         display: flex;
         margin-left: 1vw;
     }
-    .cont-items-basket{
-        margin: 0;
+    .price-basket-cont{
+        display: flex;
         justify-content: space-between;
-        margin-top: 1vw;
+        height: fit-content;
+    }
+    #icon{
+        font-size: 3vw;
+        vertical-align: top;
+        margin-top: 0;
     }
     .price,
-    .quantity,
     #som{
+        font-family: Roboto, sans-serif;
         font-size: 1.7vw;
         font-weight: 700;
     }
-    .quantity {
-        margin-left: 1vw;
-    }
     #som{
+        color: rgb(119, 119, 119);
         margin-left: 0.5vw;
     }
-    .items-quantity-cont button {
-        border: none;
-        padding: 0.5vw vw;
-        font-size: 16px;
-    }
-    .items-quantity-cont .count-p {
-        font-size: 2vw;
-    }
-    
-    .basket-btn{
-        border-radius: 1vw;
-        padding: 0.5vw 3vw;
-        font-size: 5vw;
-    }
     .section-header{
-        margin-top: 2vw;
-        font-size: 8vw;
+        text-align: center;
+        margin-top: 3vw;
+        font-size: 2.8vw;
+        font-family: Roboto, sans-serif;
+        font-weight: 500;
     }
 }
 

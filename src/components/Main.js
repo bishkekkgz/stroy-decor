@@ -5,12 +5,12 @@ import NavBlockItems from '../components/NavBlockItems';
 
 const Main = () => {
     return (
-        <div>
-            <Navbar />
+        <React.Fragment>
+            <Navbar/>
             <NavBlockItems />
             <PrimeDecorPlintusNat />
         
-        </div>
+        </React.Fragment>
     )
 }
 

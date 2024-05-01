@@ -110,6 +110,24 @@ body {
     font-family: Roboto, sans-serif;
     font-weight: 500;
 }
+.cascade-delete-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vw;
+}
+.cascade-delete {
+    background-color: rgb(167, 167, 167);
+    border-radius: 0.3vw;
+    border: none;
+    padding: 0.5vw 2vw;
+    color: #fff;
+    font-size: 1vw;
+    font-family: Roboto, sans-serif;
+    line-height: 2vw;
+    cursor: pointer;
+}
+
 
 @media screen and (max-width: 340px) {  
     *{

@@ -22,16 +22,27 @@ const Cart = () => {
         }
     };
     
-    const deleteFromBasket = (id) =>{
-        const updatedBasket = basketProducts.filter(productId => productId !== id);
-        setBasketProducts(updatedBasket);
-        localStorage.setItem('basketProducts', JSON.stringify(updatedBasket));
+    const deleteFromBasket = (id) => {
+        const confirmation = window.confirm("Удалить товар из корзины?");
+        if (confirmation) {
+            const updatedBasket = basketProducts.filter(productId => productId !== id);
+            setBasketProducts(updatedBasket);
+            localStorage.setItem('basketProducts', JSON.stringify(updatedBasket));
+        }
+    };
+    const cascadeDeleteFromBasket = () =>{
+        const confirmation = window.confirm("Удалить все товары из корзины?");
+        if (confirmation) {
+            setBasketProducts([]);
+            localStorage.removeItem('basketProducts');
+        }
     }
-
+    const isEmpty = basketProducts.length === 0;
     useEffect(() => {
         const basketProductsFromStorage = JSON.parse(localStorage.getItem('basketProducts')) || [];
         setBasketProducts(basketProductsFromStorage);
     }, []);
+    
 
     return (
         <div>
@@ -43,31 +54,36 @@ const Cart = () => {
                     <p>No products in basket</p>
                 ) : (
                     <div className='primedec'>
-                    {PlintusNat.filter(record => basketProducts.includes(record.id)).map(record => (
-                        <div className='duties' key={record.id}>
-                            <img src={require(`../assets/catalog/primeDecor/${record.image}.jpg`)} alt={record.image} />
-                            <p className='name'>{record.image}</p>
-                            {record.inStock ? (
-                                <div>
-                                    <div className='price-cont'>
-                                        <p className='price'>{record.price}</p>
-                                        <p id="som">c</p>
-                                    </div>
-                                    <div className='cont-items-basket'>
-                                        <div className='items-quantity-cont'>
-                                            <button onClick={() => decrement(record.id)}>-</button>
-                                            <p className='count-p'>{counts[record.id] || 0}</p> 
-                                            <button onClick={() => increment(record.id)}>+</button>
+                        {PlintusNat.filter(record => basketProducts.includes(record.id)).map(record => (
+                            <div className='duties' key={record.id}>
+                                <img src={require(`../assets/catalog/primeDecor/${record.image}.jpg`)} alt={record.image} />
+                                <p className='name'>{record.image}</p>
+                                {record.inStock ? (
+                                    <div>
+                                        <div className='price-cont'>
+                                            <p className='price'>{record.price}</p>
+                                            <p id="som">c</p>
                                         </div>
-                                        <button className="delete-btn" onClick={() => deleteFromBasket(record.id)}>Удалить</button>
+                                        <div className='cont-items-basket'>
+                                            <div className='items-quantity-cont'>
+                                                <button onClick={() => decrement(record.id)}>-</button>
+                                                <p className='count-p'>{counts[record.id] || 0}</p> 
+                                                <button onClick={() => increment(record.id)}>+</button>
+                                            </div>
+                                            <button className="delete-btn" onClick={() => deleteFromBasket(record.id)}>Удалить</button>
+                                        </div>
                                     </div>
-                                </div>
-                            ) : null}
-                        </div>
-                    ))}
+                                ) : null}
+                            </div>
+                        ))}
                     </div>
                 )}
             </div>
+            {!isEmpty ? (
+                <div className='cascade-delete-container'>
+                    <button className='cascade-delete' onClick={cascadeDeleteFromBasket}>Удалить все товары</button>
+                </div>
+            ) : null}
         </div>
     );
 };

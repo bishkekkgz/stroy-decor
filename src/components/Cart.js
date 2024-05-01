@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PlintusNat from '../catalog/prdec-plintus-nat';
-import '../styles/prdec.scss';
+import '../styles/cart.scss';
 import Navbar from './Navbar';
 import NavBlockItems from './NavBlockItems';
 
@@ -59,7 +59,7 @@ const Cart = () => {
                                             <p className='count-p'>{counts[record.id] || 0}</p> 
                                             <button onClick={() => increment(record.id)}>+</button>
                                         </div>
-                                        <button className="basket-btn" onClick={() => deleteFromBasket(record.id)}>Удалить</button>
+                                        <button className="delete-btn" onClick={() => deleteFromBasket(record.id)}>Удалить</button>
                                     </div>
                                 </div>
                             ) : null}

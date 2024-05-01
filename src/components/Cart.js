@@ -4,7 +4,7 @@ import '../styles/prdec.scss';
 import Navbar from './Navbar';
 import NavBlockItems from './NavBlockItems';
 
-const Basket = () => {
+const Cart = () => {
     const [basketProducts, setBasketProducts] = useState([]);
     const [counts, setCounts] = useState({});
     const increment = (id) => {
@@ -72,4 +72,4 @@ const Basket = () => {
     );
 };
 
-export default Basket;
+export default Cart;

@@ -3,7 +3,7 @@ import Main from "./components/Main";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SearchScreen from "./components/SearchScreen";
 import PrimeDecorPlintusNat from "./components/primedec/PrimeDecorPlintusNat";
-import Basket from "./components/Basket";
+import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/search" element={<SearchScreen />} />
           <Route path="/primedeccat" element={<PrimeDecorPlintusNat />} />
-          <Route path="/basketProducts" element={<Basket />} />
+          <Route path="/basketProducts" element={<Cart />} />
         </Routes>
       </Router>
     </div>

@@ -101,7 +101,7 @@ body {
     font-family: Roboto, sans-serif;
 }
 .delete-btn:hover{
-    background-color: darken(rgb(42, 83, 115), 10%);
+    background-color: darken(rgb(115, 42, 42), 10%);
 }
 .section-header{
     text-align: center;
@@ -144,6 +144,7 @@ body {
         border-radius: 0.9vw;
         padding: 1.5vw 3.2vw;
         font-size: 4vw;
+
     }
     .section-header{
         font-size: 2.8vw;
@@ -182,7 +183,6 @@ body {
         border-radius: 0.9vw;
         padding: 1.5vw 3.2vw;
         font-size: 4vw;
-
     }
     .section-header{
         margin-top: 2vw;
@@ -219,8 +219,6 @@ body {
         border-radius: 0.9vw;
         padding: 0.8vw 1vw;
         font-size: 2.5vw;
-        background-color: #640505;
-        color: #ffffff;
     }
     .section-header{
         margin-top: 2vw;

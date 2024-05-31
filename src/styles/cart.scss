@@ -127,7 +127,20 @@ body {
     line-height: 2vw;
     cursor: pointer;
 }
-
+.main-page{
+    margin: 0 auto;
+    margin-top: 1vw;
+    padding: 0.5vw 1vw;
+    background-color: rgb(42, 83, 115);
+    border-radius: 0.3vw;
+    border: none;
+    padding: 0.5vw 2vw;
+    color: #fff;
+    font-size: 1.4vw;
+    font-family: Roboto, sans-serif;
+    line-height: 2vw;
+    cursor: pointer;
+}
 
 @media screen and (max-width: 340px) {  
     *{
@@ -162,10 +175,17 @@ body {
         border-radius: 0.9vw;
         padding: 1.5vw 3.2vw;
         font-size: 4vw;
-
     }
     .section-header{
         font-size: 2.8vw;
+    }
+    .cascade-delete-container {
+        margin: 5vw 0;
+    }
+    .cascade-delete {
+        border-radius: 1.5vw;
+        padding: 5vw 8vw;
+        font-size: 6vw;
     }
 }
 
@@ -206,6 +226,14 @@ body {
         margin-top: 2vw;
         font-size: 8vw;
     }
+    .cascade-delete-container {
+        margin: 5vw 0;
+    }
+    .cascade-delete {
+        border-radius: 1.5vw;
+        padding: 5vw 8vw;
+        font-size: 6vw;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -241,5 +269,13 @@ body {
     .section-header{
         margin-top: 2vw;
         font-size: 6vw;
+    }
+    .cascade-delete-container {
+        margin: 4vw 0;
+    }
+    .cascade-delete {
+        border-radius: 0.3vw;
+        padding: 2vw 4vw;
+        font-size: 3vw;
     }
 }

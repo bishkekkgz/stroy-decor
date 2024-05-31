@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
 import PlintusNat from '../catalog/prdec-plintus-nat';
 import '../styles/cart.scss';
 import Navbar from './Navbar';
 import NavBlockItems from './NavBlockItems';
 
 const Cart = () => {
+    const navigate = useNavigate(); 
     const [basketProducts, setBasketProducts] = useState([]);
     const [counts, setCounts] = useState({});
     const increment = (id) => {
@@ -42,16 +44,20 @@ const Cart = () => {
         const basketProductsFromStorage = JSON.parse(localStorage.getItem('basketProducts')) || [];
         setBasketProducts(basketProductsFromStorage);
     }, []);
+    const goToAnotherPage = () =>{
+        navigate('/');
+    }
+    
     
 
     return (
         <div>
             <Navbar />
             <NavBlockItems />
-            <p className='section-header'>Basket</p>
+            <p className='section-header'>Корзина</p>
             <div className='primedec-container'>
                 {basketProducts.length === 0 ? (
-                    <p>No products in basket</p>
+                    <button onClick={goToAnotherPage} className='main-page'>Главная страница</button>
                 ) : (
                     <div className='primedec'>
                         {PlintusNat.filter(record => basketProducts.includes(record.id)).map(record => (

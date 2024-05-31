@@ -1,175 +1,168 @@
 .navbar-cont {
-    padding: 0.8vw 1vw;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-nav {
+    background-color: #fff;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    
+    justify-content: space-between;
 }
-
-nav ol {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.navbar-cont form {
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
 }
-nav ol a {
+.navbar-cont img {
+    width: 10vw;
+}
+.navbar-cont a {
+    color: #333;
     text-decoration: none;
-    color: #333333;
     display: flex;
-    margin-right: 3.8vw;
     align-items: center;
-    height: 100%;
 }
-nav ol a img {
-    height: 8vh;
-    margin-right: 20vw;
-}
-nav #icon, #heart, #menuBar{
-    font-size: 2vw;
-    vertical-align: middle;
-    margin: 0 0.4vw 0 2vw;
-}
-#menuBar {
-    visibility: hidden;
+.navbar-cont p {
+    margin: 0;
 }
 .search {
-    display: flex;
-    align-items: center;
-    background-color: #f2f2f2;
+    padding: 8px 16px;
+    border: 1px solid #ddd;
     border-radius: 4px;
-    padding: 0.5vw 1.2vw;
-    width: 18vw;
-    justify-content: space-between;
+    margin-left: 20px;
+}
+.submit {
+    background-color: #0b3159;
+    color: #fff;
     border: none;
-    font-size: 1.2vw;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-right: 3vw;
 }
-p{
-    font-size: 1.3vw;
+.menu-icon {
+    cursor: pointer;
 }
-#heart{
-    margin-left: 2vw;
+#icon{
+    margin-left: 36vw;
 }
-@media screen and (max-width: 350px) {
-    .navbar-cont {
-        padding: 10px;
-    }
-    nav ol a {
-        margin-right: 2vw;
-    }
-    nav ol a img {
-        height: 6vh;
-        margin-right: 1vw;
-    }
-    nav #icon, #heart{
-        font-size: 6vw;
-        margin: 0 0.8vw 0 1vw;
-    }
-    #menuBar{
-        font-size: 5vw;
-        margin: 0;
-        visibility: visible;
-    }
-    .search {
-        visibility: hidden;
-        width: 0;
-    }
-    p{
-        font-size: 4.8vw;
-    }
-    #heart{
-        margin-left: 0.4vw;
-    }
-    .menu-icon {
-        display: block; 
-    }
-    .menu-dropdown {
-        display: none; 
-    }
-    .menu-dropdown.show {
-        display: block;
-    }
+#heart, .menu-icon{
+    font-size: 2vw;
 }
 
-@media screen and (min-width: 350px) and (max-width: 760px) {
-    .navbar-cont {
-        padding: 10px;
-    }
-    nav ol a {
-        margin-right: 2vw;
-    }
-    nav ol a img {
-        height: 6vh;
-        margin-right: 1vw;
-    }
-    nav #icon, #heart{
-        font-size: 5vw;
-        margin: 0 0.7vw 0 0.7vw;
-    }
-    #menuBar{
-        font-size: 5vw;
-        margin: 0;
-        visibility: visible;
-    }
-    .search {
-        visibility: hidden;
-        width: 0;
-    }
-    p{
-        font-size: 4.6vw;
-    }
-    #heart{
-        margin-left: 0.5vw;
-    }
-    .menu-icon {
-        display: block; 
-    }
-    .menu-dropdown {
-        display: none; 
-    }
-    .menu-dropdown.show {
-        display: block;
-    }
-}
+// @media screen and (max-width: 350px) {
+//     .navbar-cont {
+//         padding: 10px;
+//     }
+//     nav ol a {
+//         margin-right: 2vw;
+//     }
+//     nav ol a img {
+//         height: 6vh;
+//         margin-right: 1vw;
+//     }
+//     nav #icon, #heart{
+//         font-size: 6vw;
+//         margin: 0 0.8vw 0 1vw;
+//     }
+//     #menuBar{
+//         font-size: 5vw;
+//         margin: 0;
+//         visibility: visible;
+//     }
+//     .search {
+//         visibility: hidden;
+//         width: 0;
+//     }
+//     p{
+//         font-size: 4.8vw;
+//     }
+//     #heart{
+//         margin-left: 0.4vw;
+//     }
+//     .menu-icon {
+//         display: block; 
+//     }
+//     .menu-dropdown {
+//         display: none; 
+//     }
+//     .menu-dropdown.show {
+//         display: block;
+//     }
+// }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .navbar-cont {
-        padding: 10px;
-    }
-    nav ol a {
-        margin-right: 3vw;
-    }
-    nav ol a img {
-        height: 6vh;
-        margin-right: 5vw;
-    }
-    nav #icon, #heart{
-        font-size: 4vw;
-        margin: 0 0.5vw 0 2vw;
-    }
-    #menuBar{
-        font-size: 4vw;
-        margin: 0;
-        visibility: visible;
-    }
-    .search {
-        visibility: hidden;
-        width: 0;
-    }
-    p{
-        font-size: 3.6vw;
-    }
-    .menu-icon {
-        display: block; 
-    }
-    .menu-dropdown {
-        display: none; 
-    }
-    .menu-dropdown.show {
-        display: block;
-    }
-}
+// @media screen and (min-width: 350px) and (max-width: 760px) {
+//     .navbar-cont {
+//         padding: 10px;
+//     }
+//     nav ol a {
+//         margin-right: 2vw;
+//     }
+//     nav ol a img {
+//         height: 6vh;
+//         margin-right: 1vw;
+//     }
+//     nav #icon, #heart{
+//         font-size: 5vw;
+//         margin: 0 0.7vw 0 0.7vw;
+//     }
+//     #menuBar{
+//         font-size: 5vw;
+//         margin: 0;
+//         visibility: visible;
+//     }
+//     .search {
+//         visibility: hidden;
+//         width: 0;
+//     }
+//     p{
+//         font-size: 4.6vw;
+//     }
+//     #heart{
+//         margin-left: 0.5vw;
+//     }
+//     .menu-icon {
+//         display: block; 
+//     }
+//     .menu-dropdown {
+//         display: none; 
+//     }
+//     .menu-dropdown.show {
+//         display: block;
+//     }
+// }
+
+// @media screen and (min-width: 768px) and (max-width: 1024px) {
+//     .navbar-cont {
+//         padding: 10px;
+//     }
+//     nav ol a {
+//         margin-right: 3vw;
+//     }
+//     nav ol a img {
+//         height: 6vh;
+//         margin-right: 5vw;
+//     }
+//     nav #icon, #heart{
+//         font-size: 4vw;
+//         margin: 0 0.5vw 0 2vw;
+//     }
+//     #menuBar{
+//         font-size: 4vw;
+//         margin: 0;
+//         visibility: visible;
+//     }
+//     .search {
+//         visibility: hidden;
+//         width: 0;
+//     }
+//     p{
+//         font-size: 3.6vw;
+//     }
+//     .menu-icon {
+//         display: block; 
+//     }
+//     .menu-dropdown {
+//         display: none; 
+//     }
+//     .menu-dropdown.show {
+//         display: block;
+//     }
+// }

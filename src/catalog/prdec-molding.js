@@ -1,4 +1,4 @@
-export default Molding = [
+const Molding = [
     {
         id: 49,
         image: "U-40",
@@ -28,3 +28,4 @@ export default Molding = [
         inStock: true
     },
 ]
+export default Molding;

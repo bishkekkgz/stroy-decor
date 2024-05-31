@@ -4,7 +4,6 @@ import '../../styles/prdec.scss';
 import PopUp from '../Popup'; // Import the PopUp component
 
 const PrimeDecorPlintusNat = () => {
-    const [counts, setCounts] = useState({});
     const [basketProducts, setBasketProducts] = useState([]);
     const [showPopUp, setShowPopUp] = useState(false);
     

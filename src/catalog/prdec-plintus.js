@@ -1,4 +1,4 @@
-export const Plintus = [
+const Plintus = [
     {
         id: 27,
         image: "C-65",
@@ -154,3 +154,4 @@ export const Plintus = [
         inStock: true
     },
 ]
+export default Plintus;

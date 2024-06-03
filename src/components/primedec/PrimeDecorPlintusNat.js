@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PlintusNat from '../../catalog/prdec-plintus-nat';
 import '../../styles/prdec.scss';
-import PopUp from '../Popup'; // Import the PopUp component
+import PopUp from '../Popup'; 
 
 const PrimeDecorPlintusNat = () => {
     const [basketProducts, setBasketProducts] = useState([]);

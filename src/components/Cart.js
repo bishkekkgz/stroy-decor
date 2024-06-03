@@ -95,3 +95,7 @@ const Cart = () => {
 };
 
 export default Cart;
+
+
+
+//todo: why basked items disappearing after leaving page, fix

@@ -28,7 +28,7 @@
     border-radius: 4px;
     margin-left: 20px;
 }
-a.submit {
+.submit {
     background-color: #0b3159;
     color: #fff;
     border: none;
@@ -38,7 +38,6 @@ a.submit {
     margin-right: 3vw;
     text-decoration: none;
 }
-
 .menu-icon {
     cursor: pointer;
 }
@@ -64,7 +63,6 @@ a.submit {
     color: #0b3159;
     text-decoration: none;
 }
-
 .search-results-container #searched-p {
     border-bottom: 1px solid rgb(216, 216, 216);
     padding: 1vw 2vw;
@@ -73,123 +71,63 @@ a.submit {
     visibility: hidden;
     width: 0;
 }
+@media screen and (max-width: 350px) {
+    .navbar-cont {
+        padding: 4px 4px;
+    }
+    .navbar-cont img {
+        width: 20vw;
+    }
+    #icon{
+        margin-left: 2px;
+    }
+    #heart, .menu-icon{
+        font-size: 5vw;
+    }
+    #menuBar{
+        visibility: visible;
+    }
+    .search-btn{
+        font-size: 6vw;
+    }
+}
 
-// @media screen and (max-width: 350px) {
-//     .navbar-cont {
-//         padding: 10px;
-//     }
-//     nav ol a {
-//         margin-right: 2vw;
-//     }
-//     nav ol a img {
-//         height: 6vh;
-//         margin-right: 1vw;
-//     }
-//     nav #icon, #heart{
-//         font-size: 6vw;
-//         margin: 0 0.8vw 0 1vw;
-//     }
-//     #menuBar{
-//         font-size: 5vw;
-//         margin: 0;
-//         visibility: visible;
-//     }
-//     .search {
-//         visibility: hidden;
-//         width: 0;
-//     }
-//     p{
-//         font-size: 4.8vw;
-//     }
-//     #heart{
-//         margin-left: 0.4vw;
-//     }
-//     .menu-icon {
-//         display: block; 
-//     }
-//     .menu-dropdown {
-//         display: none; 
-//     }
-//     .menu-dropdown.show {
-//         display: block;
-//     }
-// }
+@media screen and (min-width: 350px) and (max-width: 760px) {
+    .navbar-cont {
+        padding: 4px 0;
+    }
+    .navbar-cont img {
+        width: 20vw;
+    }
+    #icon{
+        margin-left: 2px;
+    }
+    #heart, .menu-icon{
+        font-size: 5vw;
+    }
+    #menuBar{
+        visibility: visible;
+    }
+    .search-btn{
+        font-size: 5vw;
+    }
+}
 
-// @media screen and (min-width: 350px) and (max-width: 760px) {
-//     .navbar-cont {
-//         padding: 10px;
-//     }
-//     nav ol a {
-//         margin-right: 2vw;
-//     }
-//     nav ol a img {
-//         height: 6vh;
-//         margin-right: 1vw;
-//     }
-//     nav #icon, #heart{
-//         font-size: 5vw;
-//         margin: 0 0.7vw 0 0.7vw;
-//     }
-//     #menuBar{
-//         font-size: 5vw;
-//         margin: 0;
-//         visibility: visible;
-//     }
-//     .search {
-//         visibility: hidden;
-//         width: 0;
-//     }
-//     p{
-//         font-size: 4.6vw;
-//     }
-//     #heart{
-//         margin-left: 0.5vw;
-//     }
-//     .menu-icon {
-//         display: block; 
-//     }
-//     .menu-dropdown {
-//         display: none; 
-//     }
-//     .menu-dropdown.show {
-//         display: block;
-//     }
-// }
-
-// @media screen and (min-width: 768px) and (max-width: 1024px) {
-//     .navbar-cont {
-//         padding: 10px;
-//     }
-//     nav ol a {
-//         margin-right: 3vw;
-//     }
-//     nav ol a img {
-//         height: 6vh;
-//         margin-right: 5vw;
-//     }
-//     nav #icon, #heart{
-//         font-size: 4vw;
-//         margin: 0 0.5vw 0 2vw;
-//     }
-//     #menuBar{
-//         font-size: 4vw;
-//         margin: 0;
-//         visibility: visible;
-//     }
-//     .search {
-//         visibility: hidden;
-//         width: 0;
-//     }
-//     p{
-//         font-size: 3.6vw;
-//     }
-//     .menu-icon {
-//         display: block; 
-//     }
-//     .menu-dropdown {
-//         display: none; 
-//     }
-//     .menu-dropdown.show {
-//         display: block;
-//     }
-// }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .navbar-cont {
+        padding: 4px 0;
+    }
+    .navbar-cont img {
+        width: 18vw;
+    }
+    #icon{
+        margin-left: 2px;
+        font-size: 4vw;
+    }
+    #heart, .menu-icon{
+        font-size: 4vw;
+    }
+    #menuBar{
+        visibility: visible;
+    }
+}

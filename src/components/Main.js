@@ -9,7 +9,6 @@ const Main = () => {
             <Navbar/>
             <NavBlockItems />
             <PrimeDecorPlintusNat />
-        
         </React.Fragment>
     )
 }

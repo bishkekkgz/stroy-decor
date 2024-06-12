@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Molding from '../catalog/prdec-molding';
-import Plintus from '../catalog/prdec-plintus';
-import PlintusNat from '../catalog/prdec-plintus-nat';
+import Catalog from '../data/moldings.json';
 import SearchToggle from './SearchToggle';
 import logo from '../assets/logo.jpg';
 import { SlPhone, SlBasket, SlMenu, SlMagnifier } from "react-icons/sl";
@@ -17,8 +15,7 @@ function Navbar() {
     const handleSearchChange = (event) => {
         const value = event.target.value;
         setSearchTerm(value);
-        const allProducts = [...Molding, ...Plintus, ...PlintusNat];
-        const results = allProducts.filter((product) =>
+        const results = Catalog.filter((product) =>
             product.image.toLowerCase().includes(value.toLowerCase())
         );
         setSearchResults(results);
@@ -63,11 +60,11 @@ function Navbar() {
                         {showSearchResults && searchResults.length > 0 ? (
                             <a href={`/productDetails/${searchResults[0]?.id}`} className='submit'>Search</a>
                         ) : (
-                            <button type="submit" className='submit'>Search</button>
+                            <a className='submit'>Search</a>
                         )}
                     </>
                 )}
-                <Link to="/basketProducts"><SlBasket id='heart' /></Link>
+                <Link to="/cart"><SlBasket id='heart' /></Link>
             </form>
             {showSearchResults && searchResults.length > 0 && (
                 <div className='search-results-container'>

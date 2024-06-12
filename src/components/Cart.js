@@ -1,54 +1,57 @@
-import React, { useState, useEffect} from 'react';
-import {useNavigate} from 'react-router-dom';
-import PlintusNat from '../catalog/prdec-plintus-nat';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Catalog from '../data/moldings.json';
 import '../styles/cart.scss';
 import Navbar from './Navbar';
 import NavBlockItems from './NavBlockItems';
 
-const Cart = () => {
-    const navigate = useNavigate(); 
-    const [basketProducts, setBasketProducts] = useState([]);
+const Cart = ({cart}) => {
+    const navigate = useNavigate();
+    const basketProductsFromStorage = JSON.parse(localStorage.getItem('cart')) || [];
+    const [basketProducts, setBasketProducts] = useState(basketProductsFromStorage);
     const [counts, setCounts] = useState({});
+
     const increment = (id) => {
         setCounts(prevCounts => ({
             ...prevCounts,
-            [id]: (prevCounts[id] || 0) + 1 
+            [id]: (prevCounts[id] || 0) + 1
         }));
     };
+
     const decrement = (id) => {
         if (counts[id] && counts[id] > 0) {
             setCounts(prevCounts => ({
                 ...prevCounts,
-                [id]: prevCounts[id] - 1 
+                [id]: prevCounts[id] - 1
             }));
         }
     };
-    
+
     const deleteFromBasket = (id) => {
         const confirmation = window.confirm("Удалить товар из корзины?");
         if (confirmation) {
             const updatedBasket = basketProducts.filter(productId => productId !== id);
             setBasketProducts(updatedBasket);
-            localStorage.setItem('basketProducts', JSON.stringify(updatedBasket));
+            localStorage.setItem('cart', JSON.stringify(updatedBasket));
         }
     };
-    const cascadeDeleteFromBasket = () =>{
+
+    const cascadeDeleteFromBasket = () => {
         const confirmation = window.confirm("Удалить все товары из корзины?");
         if (confirmation) {
             setBasketProducts([]);
-            localStorage.removeItem('basketProducts');
+            localStorage.removeItem('cart');
         }
-    }
+    };
     const isEmpty = basketProducts.length === 0;
     useEffect(() => {
-        const basketProductsFromStorage = JSON.parse(localStorage.getItem('basketProducts')) || [];
+        const basketProductsFromStorage = JSON.parse(localStorage.getItem('cart')) || [];
         setBasketProducts(basketProductsFromStorage);
     }, []);
-    const goToAnotherPage = () =>{
+
+    const goToAnotherPage = () => {
         navigate('/');
-    }
-    
-    
+    };
 
     return (
         <div>
@@ -60,7 +63,7 @@ const Cart = () => {
                     <button onClick={goToAnotherPage} className='main-page'>Главная страница</button>
                 ) : (
                     <div className='primedec'>
-                        {PlintusNat.filter(record => basketProducts.includes(record.id)).map(record => (
+                        {Catalog.filter(record => basketProducts.includes(record.id)).map(record => (
                             <div className='duties' key={record.id}>
                                 <img src={require(`../assets/catalog/primeDecor/${record.image}.jpg`)} alt={record.image} />
                                 <p className='name'>{record.image}</p>
@@ -73,7 +76,7 @@ const Cart = () => {
                                         <div className='cont-items-basket'>
                                             <div className='items-quantity-cont'>
                                                 <button onClick={() => decrement(record.id)}>-</button>
-                                                <p className='count-p'>{counts[record.id] || 0}</p> 
+                                                <p className='count-p'>{counts[record.id] || 0}</p>
                                                 <button onClick={() => increment(record.id)}>+</button>
                                             </div>
                                             <button className="delete-btn" onClick={() => deleteFromBasket(record.id)}>Удалить</button>
@@ -95,7 +98,3 @@ const Cart = () => {
 };
 
 export default Cart;
-
-
-
-//todo: why basked items disappearing after leaving page, fix

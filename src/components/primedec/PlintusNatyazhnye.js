@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Catalog from '../../data/moldings.json';
 import '../../styles/prdec.scss';
-import PopUp from '../Popup';
+import Navbar from '../Navbar';
+import NavBlockItems from '../NavBlockItems';
 
-const PrimeDecorPlintusNat = () => {
+const PlintusNatyazhnye = () => {
     const basketProductsFromStorage = JSON.parse(localStorage.getItem('cart')) || [];
     const [basketProducts, setBasketProducts] = useState(basketProductsFromStorage);
     const [showPopUp, setShowPopUp] = useState(false);
-
     useEffect(() => {
         fetch('http://localhost:3002/moldings')
             .then(response => {
@@ -45,10 +45,22 @@ const PrimeDecorPlintusNat = () => {
             return () => clearTimeout(timer);
         }
     }, [showPopUp]);
+    const PopUp = ({ message }) => (
+        <div className="pop-up">
+            {message}
+        </div>
+    );
+    const filteredCatalog = Catalog.filter(record => record.id >= 1 && record.id <= 26);
     return (
-        <div className='primedec-container'>
+        <div>
+            <div>
+                <Navbar />
+                <NavBlockItems />
+            </div>
+            <p className='header'> Плинтуса для натяжных потолков</p>
+            <div className='primedec-container'>
             <div className='primedec'>
-                {Catalog.map((record) => (
+                {filteredCatalog.map((record) => (
                     <div className='duties' key={record.id}>
                         <img src={require(`../../assets/catalog/primeDecor/${record.image}.jpg`)} alt={record.image} />
                         <p className='name'>{record.image}</p>
@@ -66,10 +78,10 @@ const PrimeDecorPlintusNat = () => {
                     </div>
                 ))}
             </div>
-            {showPopUp && <PopUp message="Товар обновлен в корзине" />} 
+            {showPopUp && <PopUp message="Товар обновлен в корзине" />}
         </div>
+        </div>
+        
     );
-    
 };
-
-export default PrimeDecorPlintusNat;
+export default PlintusNatyazhnye;

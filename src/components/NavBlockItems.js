@@ -6,9 +6,9 @@ const NavBlockItems = () => {
     return (
         <div className='navBlockItems-container'>
             <div className='navOneLine'>
-                <Link to="" className="link">Потолочные плинтуса для натяжных потолков</Link>
-                <Link to="" className="link">Потолочные плинтуса</Link>
-                <Link to="" className="link">Молдинги</Link>
+                <Link to="/plintusnatyazhnye" className="link">Потолочные плинтуса для натяжных потолков</Link>
+                <Link to="/plintus" className="link">Потолочные плинтуса</Link>
+                <Link to="/molding" className="link">Молдинги</Link>
                 <Link to="" className="link">Потолочные плитки</Link>
                 <Link to="" className="link">Розетки потолочные</Link>
             </div>

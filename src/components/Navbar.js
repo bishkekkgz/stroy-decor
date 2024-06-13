@@ -11,7 +11,7 @@ function Navbar() {
     const [searchResults, setSearchResults] = useState([]);
     const [showSearchResults, setShowSearchResults] = useState(false);
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
-
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const handleSearchChange = (event) => {
         const value = event.target.value;
         setSearchTerm(value);
@@ -21,19 +21,18 @@ function Navbar() {
         setSearchResults(results);
         setShowSearchResults(value !== '');
     };
-
     const handleSearchSubmit = (event) => {
         event.preventDefault();
         setShowSearchResults(true);
     };
-
+    const onMenuClick = () => {
+        setIsSidebarOpen(!isSidebarOpen);
+    };
     useEffect(() => {
         const handleResize = () => {
             setIsSmallScreen(window.innerWidth < 768);
         };
-
         window.addEventListener('resize', handleResize);
-
         return () => {
             window.removeEventListener('resize', handleResize);
         };
@@ -43,7 +42,7 @@ function Navbar() {
         <div>
             <form onSubmit={handleSearchSubmit} className='navbar-cont'>
                 <Link to="/"><img src={logo} alt='logo' /></Link>
-                <a href={`https://wa.me/+996705757528`} target="_blank" rel="noopener noreferrer"><SlPhone id='icon' /><p>0(705) 75-75-28</p></a>
+                <a href={`https://wa.me/+996705757528`} target="_blank" rel="noopener noreferrer" id='number'><SlPhone className='icon' /><p>0(705) 75-75-28</p></a>
                 {isSmallScreen ? (
                     <SlMagnifier id='search-btn' className='search-btn' />
                 ) : (
@@ -65,7 +64,18 @@ function Navbar() {
                     </>
                 )}
                 <Link to="/cart"><SlBasket id='heart' /></Link>
+                <SlMenu id='menuBar' onClick={onMenuClick}/>
             </form>
+            {isSidebarOpen && (
+                <div className="sidebar">
+                    <button className="close-btn" onClick={onMenuClick}>×</button>
+                    <Link to="/plintusnatyazhnye" className="link">&#9679; Потолочные плинтуса для натяжных потолков</Link>
+                    <Link to="/plintus" className="link">&#9679; Потолочные плинтуса</Link>
+                    <Link to="/molding" className="link">&#9679; Молдинги</Link>
+                    <Link to="" className="link">&#9679; Потолочные плитки</Link>
+                    <Link to="" className="link">&#9679; Розетки потолочные</Link>
+                </div>
+            )}
             {showSearchResults && searchResults.length > 0 && (
                 <div className='search-results-container'>
                     {searchResults.map((result, index) => (

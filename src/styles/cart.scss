@@ -1,16 +1,13 @@
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-
 body {
-    margin: 0;
-    padding: 0;
     display: flex; 
     justify-content: center;
     min-height: 100vh; 
 }
-
 .primedec-container {
     width: 100%;
 }
@@ -106,26 +103,33 @@ body {
 .section-header{
     text-align: center;
     margin-top: 3vw;
-    font-size: 2.8vw;
+    font-size: 2.4vw;
     font-family: Roboto, sans-serif;
     font-weight: 500;
 }
-.cascade-delete-container {
+.print-delete-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 3vw;
 }
 .cascade-delete {
-    background-color: rgb(167, 167, 167);
-    border-radius: 0.3vw;
     border: none;
+    border-radius: 0.3vw;
     padding: 0.5vw 2vw;
-    color: #fff;
+    color: #5f5d5d;
     font-size: 1vw;
     font-family: Roboto, sans-serif;
     line-height: 2vw;
     cursor: pointer;
+    background-color: #dfdfdf;
+    transition: background-color 0.3s ease;
+}
+.cascade-delete:hover{
+    background-color: darken(#dfdfdf, 10%);
+}
+.cascade-delete:active{
+    background-color: darken(#dfdfdf, 20%);
 }
 .main-page{
     margin: 0 auto;
@@ -141,7 +145,25 @@ body {
     line-height: 2vw;
     cursor: pointer;
 }
-
+.print-screen {
+    background-color: #4CAF50;
+    border-radius: 0.3vw;
+    border: none;
+    padding: 0.5vw 2vw;
+    color: #fff;
+    font-size: 1vw;
+    font-family: Roboto, sans-serif;
+    line-height: 2vw;
+    cursor: pointer;
+    margin-right: 1.2vw;
+    transition: background-color 0.3s ease;
+}
+.print-screen:hover {
+    background-color: darken(#4CAF50, 10%);
+}
+.print-screen:active {
+    background-color: darken(#4CAF50, 20%);
+}
 @media screen and (max-width: 340px) {  
     *{
         overflow-x: unset;
@@ -177,15 +199,30 @@ body {
         font-size: 4vw;
     }
     .section-header{
-        font-size: 2.8vw;
+        font-size: 7vw;
     }
-    .cascade-delete-container {
+    .print-delete-container {
         margin: 5vw 0;
     }
     .cascade-delete {
         border-radius: 1.5vw;
-        padding: 5vw 8vw;
-        font-size: 6vw;
+        padding: 3vw 3vw;
+        font-size: 4vw;
+    }
+    .print-screen {
+        border-radius: 1.5vw;        
+        padding: 3vw 3vw;
+        font-size: 4vw;
+        line-height: 2vw;
+        margin-right: 2vw;
+    }
+    .main-page{
+        margin-top: 3vw;
+        padding: 1.5vw 2vw;
+        border-radius: 0.3vw;
+        padding: 3.5vw 5vw;
+        font-size: 4vw;
+        border-radius: 1.5vw;        
     }
 }
 
@@ -226,13 +263,28 @@ body {
         margin-top: 2vw;
         font-size: 8vw;
     }
-    .cascade-delete-container {
+    .print-delete-container {
         margin: 5vw 0;
     }
     .cascade-delete {
         border-radius: 1.5vw;
-        padding: 5vw 8vw;
-        font-size: 6vw;
+        padding: 2.4vw 2.6vw;
+        font-size: 4vw;
+    }
+    .print-screen {
+        border-radius: 1.5vw;        
+        padding: 2.4vw 2.6vw;
+        font-size: 4vw;
+        line-height: 2vw;
+        margin-right: 1.2vw;
+    }
+    .main-page{
+        margin-top: 5vw;
+        padding: 1.5vw 2vw;
+        border-radius: 0.3vw;
+        padding: 3.5vw 5vw;
+        font-size: 4vw;
+        border-radius: 1.5vw;        
     }
 }
 
@@ -270,12 +322,27 @@ body {
         margin-top: 2vw;
         font-size: 6vw;
     }
-    .cascade-delete-container {
-        margin: 4vw 0;
+    .print-delete-container {
+        margin: 5vw 0;
     }
     .cascade-delete {
-        border-radius: 0.3vw;
-        padding: 2vw 4vw;
+        border-radius: 1vw;
+        padding: 2vw 3vw;
         font-size: 3vw;
+    }
+    .print-screen {
+        border-radius: 1vw;        
+        padding: 2vw 3vw;
+        font-size: 3vw;
+        line-height: 2vw;
+        margin-right: 2vw;
+    }
+    .main-page{
+        margin-top: 3vw;
+        padding: 1vw 1.5vw;
+        border-radius: 0.3vw;
+        padding: 2.2vw 3.2vw;
+        font-size: 2.7vw;
+        border-radius: 1.5vw;        
     }
 }

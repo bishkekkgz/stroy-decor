@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Main from "./components/Main";
 import SearchScreen from "./components/SearchScreen";
-import PrimeDecorPlintusNat from "./components/primedec/PrimeDecorPlintusNat";
+import MainAllProducts from "./components/primedec/MainAllProducts";
 import Cart from "./components/Cart";
 import ProductDetails from "./components/ProductDetails";
+import PlintusNatyazhnye from "./components/primedec/PlintusNatyazhnye";
+import Plintus from "./components/primedec/Plintus";
+import Moldings from "./components/primedec/Moldings";
 
 function App() {
   const [cart, setCart] = useState(() => {
@@ -27,8 +30,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/search" element={<SearchScreen />} />
-          <Route path="/primedeccat" element={<PrimeDecorPlintusNat />} />
+          <Route path="/main" element={<MainAllProducts />} />
           <Route path="/cart" element={<Cart cart={cart} />} />
+          <Route path="/plintusnatyazhnye" element={<PlintusNatyazhnye />} />
+          <Route path="/plintus" element={<Plintus />} />
+          <Route path="/molding" element={<Moldings />} />
           <Route path="/productDetails/:productId" element={<ProductDetails />} />
         </Routes>
       </Router>

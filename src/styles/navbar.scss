@@ -1,6 +1,6 @@
 .navbar-cont {
     background-color: #fff;
-    padding: 10px 20px;
+    padding: 10px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,13 +38,10 @@ a.submit {
     margin-right: 3vw;
     text-decoration: none;
 }
-.menu-icon {
-    cursor: pointer;
-}
-#icon{
+.icon{
     margin-left: 36vw;
 }
-#heart, .menu-icon{
+#heart{
     font-size: 2vw;
 }
 .search-results-container{
@@ -77,57 +74,214 @@ a.submit {
     }
     .navbar-cont img {
         width: 20vw;
+        margin-right: 8px;
     }
-    #icon{
+    #heart, .icon, #number{
+        font-size: 4.6vw;
         margin-left: 2px;
+        margin-right: 2px;
     }
-    #heart, .menu-icon{
-        font-size: 5vw;
+    .search-btn{
+        font-size: 4.6vw;
+        margin-left: 2px;
     }
     #menuBar{
         visibility: visible;
+        font-size: 4.6vw;
+        width: auto;
+        margin-left: 2px;
     }
-    .search-btn{
-        font-size: 6vw;
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100%;
+        background-color: #224661;
+        color: white;
+        overflow-x: hidden;
+        transition: 0.3s;
+        padding-top: 40px;
+        z-index: 1000;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    }
+    .sidebar .link {
+        padding: 15px 10px;
+        text-decoration: none;
+        font-size: 4.5vw;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        font-family: Roboto, sans-serif;
+    }
+    .sidebar .link:hover {
+        background-color: #575757;
+    }
+    .close-btn {
+        position: absolute;
+        top: 8px;
+        right: 15px;
+        font-size: 7vw;
+        background: none;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .close-btn:hover {
+        color: #bbb;
     }
 }
 
 @media screen and (min-width: 350px) and (max-width: 760px) {
     .navbar-cont {
-        padding: 4px 0;
+        padding: 6px 0;
+        width: 100%;
     }
     .navbar-cont img {
         width: 20vw;
     }
-    #icon{
-        margin-left: 2px;
-    }
-    #heart, .menu-icon{
+    .icon{
+        margin: 0 1vw 0 5vw;
         font-size: 5vw;
+    }
+    #heart, #number{
+        font-size: 5vw;
+        margin-left: 10px;
+    }
+    #number{
+        font-size: 4vw;
     }
     #menuBar{
         visibility: visible;
+        font-size: 5vw;
+        width: auto;
+        margin-left: 14px;
     }
     .search-btn{
         font-size: 5vw;
+        margin-left: 10px;
+    }
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 240px;
+        height: 100%;
+        background-color: #224661;
+        color: white;
+        overflow-x: hidden;
+        transition: 0.3s;
+        padding-top: 50px;
+        z-index: 1000;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    }
+    .sidebar .link {
+        padding: 20px 15px;
+        text-decoration: none;
+        font-size: 4.5vw;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        font-family: Roboto, sans-serif;
+    }
+    .sidebar .link:hover {
+        background-color: #575757;
+    }
+    .close-btn {
+        position: absolute;
+        top: 8px;
+        right: 34px;
+        font-size: 7vw;
+        background: none;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .close-btn:hover {
+        color: #bbb;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .navbar-cont {
-        padding: 4px 0;
+        padding: 10px 20px;
     }
     .navbar-cont img {
-        width: 18vw;
+        width: 15vw;
     }
-    #icon{
-        margin-left: 2px;
-        font-size: 4vw;
+    .search {
+        padding: 6px 12px;
+        margin-left: 20px;
     }
-    #heart, .menu-icon{
-        font-size: 4vw;
+    a.submit {
+        border: none;
+        padding: 4px 10px;
+        margin: 0 2vw 0 1vw;
+    }
+    .icon{
+        margin: 0 1vw 0 5vw;
+        font-size: 3.5vw;
+    }
+    #heart{
+        font-size: 3.5vw;
+    }
+    #number{
+        font-size: 2.8vw;
+    }
+    .search-results-container{
+        width: 17.5vw;
+        border-radius: 10px;
+        border-radius: 10px;
+    }
+    .search-results-container #searched-p {
+        padding: 1vw 2vw;
     }
     #menuBar{
         visibility: visible;
+        font-size: 3.5vw;
+        width: auto;
+        margin-left: 14px;
+    }
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 100%;
+        background-color: #224661;
+        color: white;
+        overflow-x: hidden;
+        transition: 0.3s;
+        padding-top: 80px;
+        z-index: 1000;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    }
+    .sidebar .link {
+        padding: 30px 15px;
+        text-decoration: none;
+        font-size: 3vw;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        font-family: Roboto, sans-serif;
+    }
+    .sidebar .link:hover {
+        background-color: #575757;
+    }
+    .close-btn {
+        position: absolute;
+        top: 12px;
+        right: 38px;
+        font-size: 5vw;
+        background: none;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .close-btn:hover {
+        color: #bbb;
     }
 }

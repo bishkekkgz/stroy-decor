@@ -1,14 +1,16 @@
 import React from 'react'
 import Navbar from './Navbar'
-import PrimeDecorPlintusNat from './primedec/MainAllProducts'
+import MainAllProducts from './primedec/MainAllProducts'
 import NavBlockItems from '../components/NavBlockItems';
+import Footer from './Footer';
 
 const Main = () => {
     return (
         <React.Fragment>
             <Navbar/>
             <NavBlockItems />
-            <PrimeDecorPlintusNat />
+            <MainAllProducts />
+            <Footer />
         </React.Fragment>
     )
 }

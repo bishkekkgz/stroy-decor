@@ -4,6 +4,7 @@ import '../../styles/prdec.scss';
 import Navbar from '../Navbar';
 import NavBlockItems from '../NavBlockItems';
 import Popup from '../Popup';
+import Footer from '../Footer';
 
 const Plintus = () => {
     const basketProductsFromStorage = JSON.parse(localStorage.getItem('cart')) || [];
@@ -78,8 +79,10 @@ const Plintus = () => {
             </div>
             {showPopUp && <Popup message={popupMessage} />}
         </div>
+            <div>
+                <Footer />
+            </div>
         </div>
-        
     );
 };
 export default Plintus;

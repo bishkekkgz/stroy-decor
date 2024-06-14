@@ -5,6 +5,7 @@ import '../styles/productdetail.scss';
 import Navbar from '../components/Navbar';
 import NavBlockItems from './NavBlockItems';
 import Popup from '../components/Popup';
+import Footer from './Footer';
 
 const ProductDetails = () => {
     const { productId } = useParams();
@@ -66,6 +67,9 @@ const ProductDetails = () => {
             </div>
             {showPopUp && <Popup message={popupMessage} />}
             <button onClick={goToAnotherPage} className='main-page-btn'>Главная страница</button>
+            <div>
+                <Footer />
+            </div>
         </div>
     );
 };

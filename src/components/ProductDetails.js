@@ -4,11 +4,13 @@ import Catalog from '../data/moldings.json';
 import '../styles/productdetail.scss';
 import Navbar from '../components/Navbar';
 import NavBlockItems from './NavBlockItems';
+import Popup from '../components/Popup';
 
 const ProductDetails = () => {
     const { productId } = useParams();
     const [basketProducts, setBasketProducts] = useState([]);
     const [showPopUp, setShowPopUp] = useState(false);
+    const [popupMessage, setPopupMessage] = useState('');
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -31,6 +33,7 @@ const ProductDetails = () => {
             const updatedBasket = isInBasket 
                 ? prevBasketProducts.filter(productId => productId !== id) 
                 : [...prevBasketProducts, id];
+            setPopupMessage(isInBasket ? 'Товар удален из корзины!' : 'Товар добавлен в корзину покупок!');
             return updatedBasket;
         });
         setShowPopUp(true);
@@ -43,8 +46,10 @@ const ProductDetails = () => {
 
     return (
         <div>
-            <Navbar />
-            <NavBlockItems />
+            <div>
+                <Navbar />
+                <NavBlockItems />
+            </div>
             <h2 className='h2-header'>Информация о товаре</h2>
             <div className='items'>
                 <img src={require(`../assets/catalog/primeDecor/${product.image}.jpg`)} alt={product.image} />
@@ -59,7 +64,7 @@ const ProductDetails = () => {
                     </button>
                 </div>
             </div>
-            {showPopUp && <div className='popup'>Товар обновлен в корзине</div>}
+            {showPopUp && <Popup message={popupMessage} />}
             <button onClick={goToAnotherPage} className='main-page-btn'>Главная страница</button>
         </div>
     );

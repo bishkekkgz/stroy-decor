@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Catalog from '../../data/moldings.json';
 import '../../styles/prdec.scss';
-import PopUp from '../Popup';
+import Popup from '../Popup';
 
 const MainAllProducts = () => {
     const basketProductsFromStorage = JSON.parse(localStorage.getItem('cart')) || [];
     const [basketProducts, setBasketProducts] = useState(basketProductsFromStorage);
     const [showPopUp, setShowPopUp] = useState(false);
-
+    const [popupMessage, setPopupMessage] = useState('');
     useEffect(() => {
         fetch('http://localhost:3002/moldings')
             .then(response => {
@@ -33,6 +33,7 @@ const MainAllProducts = () => {
             const updatedBasket = isInBasket
                 ? prevBasketProducts.filter(productId => productId !== id)
                 : [...prevBasketProducts, id];
+                setPopupMessage(isInBasket ? 'Товар удален из корзины!' : 'Товар добавлен в корзину покупок!');
             return updatedBasket;
         });
         setShowPopUp(true);
@@ -66,7 +67,7 @@ const MainAllProducts = () => {
                     </div>
                 ))}
             </div>
-            {showPopUp && <PopUp message="Товар обновлен в корзине" />} 
+            {showPopUp && <Popup message={popupMessage} />}
         </div>
     );
 };

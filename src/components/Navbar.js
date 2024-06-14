@@ -37,14 +37,13 @@ function Navbar() {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
-
     return (
         <div>
             <form onSubmit={handleSearchSubmit} className='navbar-cont'>
                 <Link to="/"><img src={logo} alt='logo' /></Link>
                 <a href={`https://wa.me/+996705757528`} target="_blank" rel="noopener noreferrer" id='number'><SlPhone className='icon' /><p>0(705) 75-75-28</p></a>
                 {isSmallScreen ? (
-                    <SlMagnifier id='search-btn' className='search-btn' />
+                    <Link to="/search"><SlMagnifier id='search-btn' className='search-btn'/></Link>
                 ) : (
                     <>
                         <input

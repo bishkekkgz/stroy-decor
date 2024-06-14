@@ -3,11 +3,13 @@ import Catalog from '../../data/moldings.json';
 import '../../styles/prdec.scss';
 import Navbar from '../Navbar';
 import NavBlockItems from '../NavBlockItems';
+import Popup from '../Popup';
 
 const PlintusNatyazhnye = () => {
     const basketProductsFromStorage = JSON.parse(localStorage.getItem('cart')) || [];
     const [basketProducts, setBasketProducts] = useState(basketProductsFromStorage);
     const [showPopUp, setShowPopUp] = useState(false);
+    const [popupMessage, setPopupMessage] = useState('');
     useEffect(() => {
         fetch('http://localhost:3002/moldings')
             .then(response => {
@@ -33,6 +35,7 @@ const PlintusNatyazhnye = () => {
             const updatedBasket = isInBasket
                 ? prevBasketProducts.filter(productId => productId !== id)
                 : [...prevBasketProducts, id];
+                setPopupMessage(isInBasket ? 'Товар удален из корзины!' : 'Товар добавлен в корзину покупок!');
             return updatedBasket;
         });
         setShowPopUp(true);
@@ -45,11 +48,6 @@ const PlintusNatyazhnye = () => {
             return () => clearTimeout(timer);
         }
     }, [showPopUp]);
-    const PopUp = ({ message }) => (
-        <div className="pop-up">
-            {message}
-        </div>
-    );
     const filteredCatalog = Catalog.filter(record => record.id >= 1 && record.id <= 26);
     return (
         <div>
@@ -57,7 +55,7 @@ const PlintusNatyazhnye = () => {
                 <Navbar />
                 <NavBlockItems />
             </div>
-            <p className='header'> Плинтуса для натяжных потолков</p>
+            <p id='header'> Плинтуса для натяжных потолков</p>
             <div className='primedec-container'>
             <div className='primedec'>
                 {filteredCatalog.map((record) => (
@@ -78,7 +76,7 @@ const PlintusNatyazhnye = () => {
                     </div>
                 ))}
             </div>
-            {showPopUp && <PopUp message="Товар обновлен в корзине" />}
+            {showPopUp && <Popup message={popupMessage} />}
         </div>
         </div>
         

@@ -59,3 +59,63 @@ body {
 .main-page-btn:hover {
     background-color: darken(rgb(42, 83, 115), 10%);
 }
+@media screen and (max-width: 350px) {
+    .items {
+        width: 250px;
+    }
+    .h2-header{
+        font-size: 6vw;
+        margin: 8px;
+    }
+    .name-img{
+        font-size: 5vw;
+        margin: 1vw;
+    }
+    .priceitem{
+        font-size: 2vw;
+    }
+    .main-page-btn {
+        font-size: 4vw;
+        margin-top: 10vw;
+    }
+}
+@media screen and (min-width: 350px) and (max-width: 760px) {
+    .items {
+        width: 330px;
+    }
+    .h2-header{
+        font-size: 6vw;
+        margin: 15px;
+    }
+    .name-img{
+        font-size: 6vw;
+        margin: 1vw;
+    }
+    .priceitem{
+        font-size: 2vw;
+    }
+    .main-page-btn {
+        font-size: 4vw;
+        margin-top: 10vw;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .items {
+        width: 500px;
+    }
+    .h2-header{
+        font-size: 4vw;
+        margin: 25px;
+    }
+    .name-img{
+        font-size: 5vw;
+        margin: 1vw;
+    }
+    .priceitem{
+        font-size: 5vw;
+    }
+    .main-page-btn {
+        font-size: 3vw;
+        margin-top: 8vw;
+    }
+}

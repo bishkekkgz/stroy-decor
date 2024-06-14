@@ -12,6 +12,7 @@
 }
 .navbar-cont img {
     width: 10vw;
+    margin-right: 36vw;
 }
 .navbar-cont a {
     color: #333;
@@ -35,11 +36,9 @@ a.submit {
     border-radius: 4px;
     padding: 8px 16px;
     cursor: pointer;
-    margin-right: 3vw;
+    margin-right: 1.5vw;
+    margin-left: 1vw !important;
     text-decoration: none;
-}
-.icon{
-    margin-left: 36vw;
 }
 #heart{
     font-size: 2vw;
@@ -48,11 +47,10 @@ a.submit {
     background-color: #ffffff;
     position: absolute;
     top: 8%;
-    left: 67%;
+    left: 66%;
     width: 17.5vw;
     border-radius: 10px;
     border: 0.2px solid rgb(213, 213, 213);
-    border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
@@ -70,26 +68,28 @@ a.submit {
 }
 @media screen and (max-width: 350px) {
     .navbar-cont {
-        padding: 4px 4px;
+        padding: 10px;
     }
     .navbar-cont img {
         width: 20vw;
-        margin-right: 8px;
+        margin-right: 7vw;
     }
-    #heart, .icon, #number{
-        font-size: 4.6vw;
-        margin-left: 2px;
-        margin-right: 2px;
+    .navbar-cont p {
+        margin: 0;
     }
-    .search-btn{
-        font-size: 4.6vw;
-        margin-left: 2px;
+    #heart, .icon, #number, #search-btn{
+        font-size: 5vw;
+        margin-left: 1.3vw;
+        margin-right: 2vw;
+    }
+    #number{
+        font-size: 4.4vw;
     }
     #menuBar{
         visibility: visible;
-        font-size: 4.6vw;
+        font-size: 5vw;
         width: auto;
-        margin-left: 2px;
+        margin-left: 2vw;
     }
     .sidebar {
         position: fixed;
@@ -127,57 +127,49 @@ a.submit {
         border: none;
         cursor: pointer;
     }
-    
-    .close-btn:hover {
-        color: #bbb;
-    }
 }
 
 @media screen and (min-width: 350px) and (max-width: 760px) {
     .navbar-cont {
-        padding: 6px 0;
-        width: 100%;
+        padding: 10px;
     }
     .navbar-cont img {
         width: 20vw;
+        margin-right: 10vw;
     }
-    .icon{
-        margin: 0 1vw 0 5vw;
-        font-size: 5vw;
+    .navbar-cont p {
+        margin: 0;
     }
-    #heart, #number{
+    #heart, .icon, #number, #search-btn{
         font-size: 5vw;
-        margin-left: 10px;
+        margin-left: 1.3vw;
+        margin-right: 2vw;
     }
     #number{
-        font-size: 4vw;
+        font-size: 4.4vw;
     }
     #menuBar{
         visibility: visible;
         font-size: 5vw;
         width: auto;
-        margin-left: 14px;
-    }
-    .search-btn{
-        font-size: 5vw;
-        margin-left: 10px;
+        margin-left: 2vw;
     }
     .sidebar {
         position: fixed;
         top: 0;
         right: 0;
-        width: 240px;
+        width: 200px;
         height: 100%;
         background-color: #224661;
         color: white;
         overflow-x: hidden;
         transition: 0.3s;
-        padding-top: 50px;
+        padding-top: 40px;
         z-index: 1000;
         box-shadow: 2px 0 5px rgba(0,0,0,0.5);
     }
     .sidebar .link {
-        padding: 20px 15px;
+        padding: 15px 10px;
         text-decoration: none;
         font-size: 4.5vw;
         color: white;
@@ -191,58 +183,36 @@ a.submit {
     .close-btn {
         position: absolute;
         top: 8px;
-        right: 34px;
+        right: 15px;
         font-size: 7vw;
         background: none;
         color: white;
         border: none;
         cursor: pointer;
     }
-    
-    .close-btn:hover {
-        color: #bbb;
-    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .navbar-cont {
-        padding: 10px 20px;
+        padding: 10px;
     }
     .navbar-cont img {
         width: 15vw;
+        margin-right: 7vw;
     }
-    .search {
-        padding: 6px 12px;
-        margin-left: 20px;
+    .navbar-cont p {
+        margin: 0;
     }
-    a.submit {
-        border: none;
-        padding: 4px 10px;
-        margin: 0 2vw 0 1vw;
-    }
-    .icon{
-        margin: 0 1vw 0 5vw;
-        font-size: 3.5vw;
-    }
-    #heart{
-        font-size: 3.5vw;
-    }
-    #number{
-        font-size: 2.8vw;
-    }
-    .search-results-container{
-        width: 17.5vw;
-        border-radius: 10px;
-        border-radius: 10px;
-    }
-    .search-results-container #searched-p {
-        padding: 1vw 2vw;
+    #heart, .icon, #number, #search-btn{
+        font-size: 3vw;
+        margin-left: 1vw;
+        margin-right: 1vw;
     }
     #menuBar{
         visibility: visible;
-        font-size: 3.5vw;
+        font-size: 3vw;
         width: auto;
-        margin-left: 14px;
+        margin-left: 2vw;
     }
     .sidebar {
         position: fixed;
@@ -254,12 +224,12 @@ a.submit {
         color: white;
         overflow-x: hidden;
         transition: 0.3s;
-        padding-top: 80px;
+        padding-top: 10vw;
         z-index: 1000;
         box-shadow: 2px 0 5px rgba(0,0,0,0.5);
     }
     .sidebar .link {
-        padding: 30px 15px;
+        padding: 25px 10px;
         text-decoration: none;
         font-size: 3vw;
         color: white;
@@ -272,16 +242,21 @@ a.submit {
     }
     .close-btn {
         position: absolute;
-        top: 12px;
-        right: 38px;
-        font-size: 5vw;
+        top: 8px;
+        right: 15px;
+        font-size: 7vw;
         background: none;
         color: white;
         border: none;
         cursor: pointer;
     }
-    
-    .close-btn:hover {
-        color: #bbb;
+    .search-results-container{
+        top: 7%;
+        left: 54.5%;
+        width: 22vw;
+        border-radius: 10px;
+    }
+    .search-results-container #searched-p {
+        padding: 1vw 2vw;
     }
 }

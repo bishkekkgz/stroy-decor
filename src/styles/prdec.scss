@@ -76,16 +76,15 @@
 .basket-btn:hover{
     background-color: darken(rgb(42, 83, 115), 10%);
 }
-.header{
+#header{
     text-align: center;
     font-family: Roboto, sans-serif;
     font-weight: 500;
     width: 70%;
     margin: 0 auto;
-    font-size: 1.8vw;
+    font-size: 1.8vw !important;
     margin-top: 2.3vw;
 }
-
 @media screen and (max-width: 340px) {  
     *{
         overflow-x: unset;
@@ -113,8 +112,8 @@
         padding: 1.5vw 3.2vw;
         font-size: 4vw;
     }
-    .header{
-        font-size: 4.5vw;
+    #header{
+        font-size: 5vw !important;
         margin-top: 0;
         font-weight: 500;
     }
@@ -146,41 +145,43 @@
         padding: 1.5vw 3.2vw;
         font-size: 4vw;
     }
-    .header{
-        font-size: 5vw;
+    #header{
+        font-size: 6vw !important;
         margin-top: 0;
         font-weight: 500;
+        width: 80%;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+    *{
+        overflow-x: unset;
+    }
     .primedec {
-        margin-left: -8px;
-        width: 100%;
+        margin-left: -10px;
     }
     .name{
-        font-size: 4.5vw;
-        font-weight: 500;
+        font-size: 2.5vw;
+        font-weight: 600;
     }
     .price,
     .quantity,
     #som{
-        font-size: 4vw;
-        font-weight: 700;
+        font-size: 2.5vw;
+        font-weight: 600;
     }
-    #icon{
-        font-size: 5vw;
-        margin-right: 1.8vw;
+    #basket{
+        font-size: 3vw;
+        margin-right: 1vw;
     }
     .basket-btn{
-        border-radius: 0.9vw;
+        border-radius: 0.7vw;
         padding: 0.8vw 2vw;
         font-size: 2vw;
     }
-    .header{
-        font-size: 4vw;
+    #header{
+        font-size: 4vw !important;
         margin-top: 0;
-        width: 60%;
         font-weight: 500;
     }
 }

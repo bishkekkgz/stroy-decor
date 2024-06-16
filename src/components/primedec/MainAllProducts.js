@@ -52,18 +52,21 @@ const MainAllProducts = () => {
                 {Catalog.map((record) => (
                     <div className='duties' key={record.id}>
                         <img src={require(`../../assets/catalog/primeDecor/${record.image}.jpg`)} alt={record.image} />
-                        <p className='name'>{record.image}</p>
-                        {record.inStock ? (
-                            <div className='price-cart-cont'>
-                                <div className='price-cont'>
-                                    <p className='price'>{record.price}</p>
-                                    <p id="som">c</p>
+                        <div className='name-container'>
+                            <p className='name'>{record.image}</p>
+                            {record.inStock ? (
+                                <div className='price-cart-cont'>
+                                    <div className='price-cont'>
+                                        <p className='price'>{record.price}</p>
+                                        <p id="som">c</p>
+                                    </div>
+                                    <button className="basket-btn" onClick={() => toggleBasket(record.id)}>
+                                        {basketProducts.includes(record.id) ? 'Удалить из корзины' : 'В корзину'}
+                                    </button>
                                 </div>
-                                <button className="basket-btn" onClick={() => toggleBasket(record.id)}>
-                                    {basketProducts.includes(record.id) ? 'Удалить из корзины' : 'В корзину'}
-                                </button>
-                            </div>
-                        ) : null}
+                            ) : null}
+                        </div>
+                        
                     </div>
                 ))}
             </div>

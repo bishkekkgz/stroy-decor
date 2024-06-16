@@ -2,31 +2,24 @@
     margin: 0;
     padding: 0;
 }
+.footer{
+    margin-top: 2.5vw;
+}
 .footer-container{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1vw;
 }
 .logo-container{
     display: inline-block;
 }
 #logo{
-    width: 10vw;
+    width: 7vw;
     margin: 0 auto;
-    margin-top: 2.8vw;
 }
-.navOneLineLinks {
+.years-container{
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 10px; 
-    margin-top: 2vw;
-}
-.links {
-    color: #0b3159;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 5px 10px; 
 }
 line {
     display: block;
@@ -37,103 +30,56 @@ line {
     margin-bottom: 20px;
 }
 .years-text{
-    margin-bottom: 20px;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1vw;
-    color: #626262;
+    color: #7b7b7b;
 }
 @media screen and (max-width: 350px) {
     .footer-container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .logo-container{
-        display: inline;
+        margin-bottom: 2vw;
     }
     #logo{
-        width: 24vw;
-        margin-top: 10vw;
+        width: 20vw;
     }
-    .navOneLineLinks {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px; 
-        margin-top: 4vw;
-    }
-    .links {
-        color: #0b3159;
-        text-decoration: none;
-        font-weight: bold;
-        margin: 2px; 
-        font-size: 4vw;
+    line {
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
     .years-text{
-        margin-bottom: 20px;
-        font-size: 5vw;
+        font-size: 4vw;
     }
 }
 
 @media screen and (min-width: 350px) and (max-width: 760px) {
     .footer-container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .logo-container{
-        display: inline;
+        margin-bottom: 2vw;
+        margin: 0 2.5vw 2.5vw 2.5vw;
     }
     #logo{
-        width: 24vw;
-        margin-top: 8vw;
+        width: 20vw;
     }
-    .navOneLineLinks {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px; 
-        margin-top: 3vw;
-    }
-    .links {
-        color: #0b3159;
-        text-decoration: none;
-        font-weight: bold;
-        margin: 2px; 
-        font-size: 3vw;
+    line {
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
     .years-text{
-        margin-bottom: 20px;
         font-size: 4vw;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .footer-container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .logo-container{
-        display: inline;
+        margin-bottom: 2vw;
+        margin: 0 4vw;
     }
     #logo{
-        width: 18vw;
-        margin-top: 8vw;
+        width: 12vw;
     }
-    .navOneLineLinks {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px; 
-        margin-top: 3vw;
-    }
-    .links {
-        color: #0b3159;
-        text-decoration: none;
-        font-weight: bold;
-        margin: 2px; 
-        font-size: 2vw;
+    line {
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
     .years-text{
-        margin-bottom: 20px;
-        font-size: 2vw;
+        font-size: 2.5vw;
     }
 }

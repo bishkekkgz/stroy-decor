@@ -6,7 +6,7 @@ import NavBlockItems from '../NavBlockItems';
 import Popup from '../Popup';
 import Footer from '../Footer';
 
-const Plintus = () => {
+const Rozetki = () => {
     const basketProductsFromStorage = JSON.parse(localStorage.getItem('cart')) || [];
     const [basketProducts, setBasketProducts] = useState(basketProductsFromStorage);
     const [showPopUp, setShowPopUp] = useState(false);
@@ -49,16 +49,14 @@ const Plintus = () => {
             return () => clearTimeout(timer);
         }
     }, [showPopUp]);
-    const filteredCatalog = Catalog.filter(record => 
-        (record.id >= 27 && record.id <= 48) || (record.id >= 134 && record.id <= 146)
-    );
+    const filteredCatalog = Catalog.filter(record => record.id >= 134 && record.id <= 146);
     return (
         <div>
             <div>
                 <Navbar />
                 <NavBlockItems />
             </div>
-            <p id='header'>Потолочные плинтуса</p>
+            <p id='header'>Розетки потолочные</p>
             <div className='primedec-container'>
             <div className='primedec'>
                 {filteredCatalog.map((record) => (
@@ -85,6 +83,7 @@ const Plintus = () => {
                 <Footer />
             </div>
         </div>
+        
     );
 };
-export default Plintus;
+export default Rozetki;

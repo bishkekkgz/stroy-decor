@@ -8,6 +8,8 @@ import ProductDetails from "./components/ProductDetails";
 import PlintusNatyazhnye from "./components/primedec/PlintusNatyazhnye";
 import Plintus from "./components/primedec/Plintus";
 import Moldings from "./components/primedec/Moldings";
+import Plitki from "./components/primedec/Plitki";
+import Rozetki from "./components/primedec/Rozetki";
 
 function App() {
   const [cart, setCart] = useState(() => {
@@ -36,6 +38,8 @@ function App() {
           <Route path="/plintus" element={<Plintus />} />
           <Route path="/molding" element={<Moldings />} />
           <Route path="/productDetails/:productId" element={<ProductDetails />} />
+          <Route path="/plitki" element={<Plitki />} />
+          <Route path="/rozetki" element={<Rozetki />} />
         </Routes>
       </Router>
     </div>

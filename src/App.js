@@ -27,7 +27,8 @@ function App() {
   }, [cart]);
 
   return (
-    <div className="App">
+    <BrowserRouter basename="/stroy-decor">
+      <div className="App">
       <Router>
         <Routes>
           <Route path="/" element={<Main />} />
@@ -43,6 +44,8 @@ function App() {
         </Routes>
       </Router>
     </div>
+    </BrowserRouter>
+    
   );
 }
 

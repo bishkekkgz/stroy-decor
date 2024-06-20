@@ -45,7 +45,7 @@ const Rozetki = () => {
         if (showPopUp) {
             const timer = setTimeout(() => {
                 setShowPopUp(false);
-            }, 2000);
+            }, 800);
             return () => clearTimeout(timer);
         }
     }, [showPopUp]);

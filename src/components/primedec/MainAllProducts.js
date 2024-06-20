@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Catalog from '../../data/moldings.json';
 import '../../styles/prdec.scss';
 import Popup from '../Popup';
+import imgDesktop2 from '../../assets/img-desktop2.jpg'
 
 const MainAllProducts = () => {
     const basketProductsFromStorage = JSON.parse(localStorage.getItem('cart')) || [];
@@ -42,12 +43,16 @@ const MainAllProducts = () => {
         if (showPopUp) {
             const timer = setTimeout(() => {
                 setShowPopUp(false);
-            }, 2000);
+            }, 800);
             return () => clearTimeout(timer);
         }
     }, [showPopUp]);
     return (
-        <div className='primedec-container'>
+        <div className='allproducts-container'>
+            <div className='responsive-picture'>
+                <img src={imgDesktop2} alt="Decorative Moldings" className='img-responsive img-desktop' />
+            </div>
+            <div className='primedec-container'>
             <div className='primedec'>
                 {Catalog.map((record) => (
                     <div className='duties' key={record.id}>
@@ -72,6 +77,8 @@ const MainAllProducts = () => {
             </div>
             {showPopUp && <Popup message={popupMessage} />}
         </div>
+        </div>
+        
     );
 };
 

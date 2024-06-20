@@ -27,9 +27,8 @@ function App() {
   }, [cart]);
 
   return (
-    <BrowserRouter basename="/stroy-decor">
+    <Router basename="/stroy-decor">
       <div className="App">
-      <Router>
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/search" element={<SearchScreen />} />
@@ -42,10 +41,8 @@ function App() {
           <Route path="/plitki" element={<Plitki />} />
           <Route path="/rozetki" element={<Rozetki />} />
         </Routes>
-      </Router>
-    </div>
-    </BrowserRouter>
-    
+      </div>
+    </Router>
   );
 }
 

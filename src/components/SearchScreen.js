@@ -38,7 +38,7 @@ const SearchScreen = () => {
                             onChange={handleSearchChange}
                         />
                         {showSearchResults && searchResults.length > 0 ? (
-                            <a href={`/productDetails/${searchResults[0]?.id}`} className='submit'>Search</a>
+                            <a href={`/stroy-decor/productDetails/${searchResults[0]?.id}`} className='submit'>Search</a>
                         ) : (
                             <a className='submit'>Search</a>
                         )}
@@ -48,7 +48,7 @@ const SearchScreen = () => {
                 <div className='search-result'>
                     {searchResults.map((result, index) => (
                         <p id='searche-p' key={index}>
-                            <a href={`/productDetails/${result.id}`} className='searche-item'>
+                            <a href={`/stroy-decor/productDetails/${result.id}`} className='searche-item'>
                                 <SearchToggle product={result} weight="700" />
                             </a>
                         </p>

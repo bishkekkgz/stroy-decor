@@ -38,6 +38,7 @@ function App() {
           <Route path="/plintus" element={<Plintus />} />
           <Route path="/molding" element={<Moldings />} />
           <Route path="/productDetails/:productId" element={<ProductDetails />} />
+          <Route path="/productDetails" element={<ProductDetails />} />
           <Route path="/plitki" element={<Plitki />} />
           <Route path="/rozetki" element={<Rozetki />} />
         </Routes>

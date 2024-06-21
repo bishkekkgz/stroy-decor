@@ -50,7 +50,7 @@ const Plintus = () => {
         }
     }, [showPopUp]);
     const filteredCatalog = Catalog.filter(record => 
-        (record.id >= 27 && record.id <= 48) || (record.id >= 134 && record.id <= 146)
+        (record.id >= 27 && record.id <= 48) || (record.id >= 74 && record.id <= 133)
     );
     return (
         <div>
@@ -64,18 +64,16 @@ const Plintus = () => {
                 {filteredCatalog.map((record) => (
                     <div className='duties' key={record.id}>
                         <img src={require(`../../assets/catalog/primeDecor/${record.image}.jpg`)} alt={record.image} />
-                        <p className='name'>{record.image}</p>
-                        {record.inStock ? (
-                            <div className='price-cart-cont'>
-                                <div className='price-cont'>
-                                    <p className='price'>{record.price}</p>
-                                    <p id="som">c</p>
-                                </div>
-                                <button className="basket-btn" onClick={() => toggleBasket(record.id)}>
-                                    {basketProducts.includes(record.id) ? 'Удалить из корзины' : 'В корзину'}
-                                </button>
-                            </div>
-                        ) : null}
+                        <div className='price-cart-cont'>
+                            <p className='name'>{record.image}</p>
+                            <button
+                                className="basket-btn"
+                                onClick={() => toggleBasket(record.id)}
+                                style={{ backgroundColor: basketProducts.includes(record.id) ? 'rgb(115, 42, 42)' : 'rgb(42, 83, 115)' }}
+                            >
+                                {basketProducts.includes(record.id) ? 'Удалить' : 'В корзину'}
+                            </button>
+                        </div>
                     </div>
                 ))}
             </div>

@@ -76,12 +76,7 @@ const Cart = ({cart}) => {
                             <div className='duties' key={record.id}>
                                 <img src={require(`../assets/catalog/primeDecor/${record.image}.jpg`)} alt={record.image} />
                                 <p className='name'>{record.image}</p>
-                                {record.inStock ? (
                                     <div>
-                                        <div className='price-cont'>
-                                            <p className='price'>{record.price}</p>
-                                            <p id="som">c</p>
-                                        </div>
                                         <div className='cont-items-basket'>
                                             <div className='items-quantity-cont'>
                                                 <button onClick={() => decrement(record.id)}>-</button>
@@ -91,7 +86,6 @@ const Cart = ({cart}) => {
                                             <button className="delete-btn" onClick={() => deleteFromBasket(record.id)}>Удалить</button>
                                         </div>
                                     </div>
-                                ) : null}
                             </div>
                         ))}
                     </div>

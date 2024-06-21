@@ -54,15 +54,16 @@ const ProductDetails = () => {
             <h2 className='h2-header'>Информация о товаре</h2>
             <div className='items'>
                 <img src={require(`../assets/catalog/primeDecor/${product.image}.jpg`)} alt={product.image} />
-                <p className='name-img'>{product.image}</p>
                 <div className='price-cart-cont'>
-                    <div className='price-cont'>
-                        <p className='price'>{product.price}</p>
-                        <p id="som">c</p>
-                    </div>
-                    <button className="basket-btn" onClick={() => toggleBasket(product.id)}>
-                        {basketProducts.includes(product.id) ? 'Удалить из корзины' : 'В корзину'}
+                    <p className='name-img'>{product.image}</p>
+                    <button
+                        className="basket-btn"
+                        onClick={() => toggleBasket(product.id)}
+                        style={{ backgroundColor: basketProducts.includes(product.id) ? 'rgb(115, 42, 42)' : 'rgb(42, 83, 115)' }}
+                    >
+                        {basketProducts.includes(product.id) ? 'Удалить' : 'В корзину'}
                     </button>
+
                 </div>
             </div>
             {showPopUp && <Popup message={popupMessage} />}

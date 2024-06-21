@@ -28,6 +28,13 @@ body {
         width: 100%;
     }
 }
+.price-cart-cont{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.4vw !important;
+    margin-left: 0.4vw;
+    margin-bottom: 0 !important;
+}
 .name{
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
@@ -35,32 +42,27 @@ body {
     cursor: auto;
     font-size: 1.6vw;
     font-weight: 400;
-    margin: 1vw;
+    margin-left: 0.4vw !important;
+    margin-top: 0.4vw !important;
 }
 .price-cont,
 .items-quantity-cont,
 .cont-items-basket{
     display: flex;
-    margin-left: 1vw;
+    margin-left: 0.4vw;
 }
 .cont-items-basket{
     margin: 0;
     justify-content: space-between;
     margin-top: 1vw;
 }
-.price,
-.quantity,
-#som{
+.quantity{
     font-family: Roboto, sans-serif;
     font-size: 1.7vw;
     font-weight: 700;
 }
 .quantity {
     margin-left: 1vw;
-}
-#som{
-    color: rgb(119, 119, 119);
-    margin-left: 0.5vw;
 }
 .price-cart-cont{
     display: flex;
@@ -173,18 +175,11 @@ body {
     }
     .name{
         font-size: 7vw;
+        
     }
     #basket{
         font-size: 7vw;
         margin-right: 1.8vw;
-    }
-    .price,
-    #som{
-        font-size: 6vw;
-        font-weight: 700;
-    }
-    #som{
-        margin-left: 2vw;
     }
     .items-quantity-cont button {
         padding: 1vw 3vw;
@@ -236,12 +231,8 @@ body {
     .name{
         font-size: 7vw;
         font-weight: 600;
-    }
-    .price,
-    .quantity,
-    #som{
-        font-size: 6vw;
-        font-weight: 700;
+        margin-left: 2vw !important;
+        margin-top: 2vw !important;
     }
     #basket{
         font-size: 7vw;

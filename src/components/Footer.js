@@ -2,8 +2,6 @@ import React from 'react';
 import logo from '../assets/logo.jpg';
 import { Link } from 'react-router-dom';
 import '../styles/footer.scss';
-import { SlPhone } from "react-icons/sl";
-import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
     return (

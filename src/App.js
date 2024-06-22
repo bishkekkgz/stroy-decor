@@ -8,7 +8,6 @@ import ProductDetails from "./components/ProductDetails";
 import PlintusNatyazhnye from "./components/primedec/PlintusNatyazhnye";
 import Plintus from "./components/primedec/Plintus";
 import Moldings from "./components/primedec/Moldings";
-import Plitki from "./components/primedec/Plitki";
 import Rozetki from "./components/primedec/Rozetki";
 
 function App() {
@@ -39,7 +38,6 @@ function App() {
           <Route path="/molding" element={<Moldings />} />
           <Route path="/productDetails/:productId" element={<ProductDetails />} />
           <Route path="/productDetails" element={<ProductDetails />} />
-          <Route path="/plitki" element={<Plitki />} />
           <Route path="/rozetki" element={<Rozetki />} />
         </Routes>
       </div>

@@ -71,7 +71,6 @@ function Navbar() {
                     <Link to="/plintusnatyazhnye" className="link">&#9679; Потолочные плинтуса для натяжных потолков</Link>
                     <Link to="/plintus" className="link">&#9679; Потолочные плинтуса</Link>
                     <Link to="/molding" className="link">&#9679; Молдинги</Link>
-                    <Link to="/plitki" className="link">&#9679; Потолочные плитки</Link>
                     <Link to="/rozetki" className="link">&#9679; Розетки потолочные</Link>
                 </div>
             )}

@@ -68,10 +68,11 @@ function Navbar() {
             {isSidebarOpen && (
                 <div className="sidebar">
                     <button className="close-btn" onClick={onMenuClick}>×</button>
-                    <Link to="/plintusnatyazhnye" className="link">&#9679; Потолочные плинтуса для натяжных потолков</Link>
-                    <Link to="/plintus" className="link">&#9679; Потолочные плинтуса</Link>
-                    <Link to="/molding" className="link">&#9679; Молдинги</Link>
-                    <Link to="/rozetki" className="link">&#9679; Розетки потолочные</Link>
+                    <Link to="/plintusnatyazhnye" className="link">Плинтуса для натяжных потолков</Link>
+                    <Link to="/plintus" className="link">Потолочные плинтуса</Link>
+                    <Link to="/molding" className="link">Молдинги</Link>
+                    <Link to="/rozetki" className="link">Розетки потолочные</Link>
+                    <Link to='/' className='link' id='homebtn'>Главная страница</Link>
                 </div>
             )}
             {showSearchResults && searchResults.length > 0 && (

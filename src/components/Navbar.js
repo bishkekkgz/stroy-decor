@@ -56,7 +56,7 @@ function Navbar() {
                             onChange={handleSearchChange}
                         />
                         {showSearchResults && searchResults.length > 0 ? (
-                            <a href={`/stroy-decor/productDetails/${searchResults[0]?.id}`} className='submit'>Search</a>
+                            <Link to={`/productDetails/${searchResults[0]?.id}`} className='submit'>Search</Link>
                         ) : (
                             <a className='submit'>Search</a>
                         )}
@@ -79,9 +79,9 @@ function Navbar() {
                 <div className='search-results-container'>
                     {searchResults.map((result, index) => (
                         <p id='searched-p' key={index}>
-                            <a href={`/stroy-decor/productDetails/${result.id}`} className='searched-item'>
+                            <Link to={`/productDetails/${result.id}`} className='searched-item'>
                                 <SearchToggle product={result} weight="700" />
-                            </a>
+                            </Link>
                         </p>
                     ))}
                 </div>

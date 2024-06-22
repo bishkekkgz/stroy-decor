@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/stroy-decor/static/css/main.acba4e0b.css",
-    "main.js": "/stroy-decor/static/js/main.1b3d6c36.js",
+    "main.js": "/stroy-decor/static/js/main.ba6afa8d.js",
     "static/media/D 522.jpg": "/stroy-decor/static/media/D 522.7291d3daafb162c2bb73.jpg",
     "static/media/D 529.jpg": "/stroy-decor/static/media/D 529.2f17281f0b5cd214396c.jpg",
     "static/media/D 519.jpg": "/stroy-decor/static/media/D 519.cf926ce55de42d02593a.jpg",
@@ -152,10 +152,10 @@
     "static/media/logo.jpg": "/stroy-decor/static/media/logo.7d90a69aa4f9272a6c8f.jpg",
     "index.html": "/stroy-decor/index.html",
     "main.acba4e0b.css.map": "/stroy-decor/static/css/main.acba4e0b.css.map",
-    "main.1b3d6c36.js.map": "/stroy-decor/static/js/main.1b3d6c36.js.map"
+    "main.ba6afa8d.js.map": "/stroy-decor/static/js/main.ba6afa8d.js.map"
   },
   "entrypoints": [
     "static/css/main.acba4e0b.css",
-    "static/js/main.1b3d6c36.js"
+    "static/js/main.ba6afa8d.js"
   ]
 }

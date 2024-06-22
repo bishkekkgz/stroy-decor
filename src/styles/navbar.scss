@@ -12,7 +12,7 @@
 }
 .navbar-cont img {
     width: 10vw;
-    margin-right: 36vw;
+    margin-right: 31vw;
 }
 .navbar-cont a {
     color: #333;
@@ -47,7 +47,7 @@ a.submit {
     background-color: #ffffff;
     position: absolute;
     top: 8%;
-    left: 76%;
+    left: 71.4%;
     width: 17.5vw;
     border-radius: 10px;
     border: 0.2px solid rgb(213, 213, 213);
@@ -151,6 +151,9 @@ a.submit {
         top: 12px;
         right: 12px;
     }
+    #homebtn{
+        font-size: 4.5vw;
+    }
 }
 
 @media screen and (min-width: 350px) and (max-width: 760px) {
@@ -193,6 +196,9 @@ a.submit {
         top: 14px;
         right: 13px;
     }
+    #homebtn{
+        font-size: 4.5vw;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -230,7 +236,7 @@ a.submit {
     }
     .search-results-container{
         top: 7%;
-        left: 54.5%;
+        left: 54%;
         width: 22vw;
         border-radius: 10px;
     }
@@ -241,5 +247,8 @@ a.submit {
         top: 18px;
         right: 12px;
         font-size: 5vw;
+    }
+    #homebtn{
+        font-size: 3vw;
     }
 }

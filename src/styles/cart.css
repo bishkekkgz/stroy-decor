@@ -23,7 +23,6 @@ body {
   grid-template-columns: repeat(auto-fit, 300px);
   justify-content: center;
 }
-
 .duties {
   width: 100%;
   border-radius: 10px;
@@ -33,7 +32,6 @@ body {
 .duties img {
   width: 100%;
 }
-
 .name {
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
